@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>What's New — 1stTab</title>
+<meta name="description" content="1stTab v1.0 launch — full feature list and the story behind the extension.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500&family=Roboto+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .feature-list-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 24px;
+  }
+  .feature-list-section { margin-bottom: 20px; }
+  .feature-list-section h4 {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--text-3);
+    margin-bottom: 8px;
+    margin-top: 16px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  .feature-list-section ul { list-style: none; padding: 0; margin: 0; }
+  .feature-list-section li {
+    font-size: 14px;
+    color: var(--text-2);
+    padding: 5px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    border-bottom: 1px solid rgba(0,0,0,.04);
+    line-height: 1.45;
+  }
+  .feature-list-section li::before {
+    content: '→';
+    color: var(--blue);
+    font-size: 12px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .plus-tag {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--amber);
+    background: var(--amber-light);
+    border-radius: 4px;
+    padding: 1px 5px;
+    flex-shrink: 0;
+    align-self: center;
+  }
+  .version-hero {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  .version-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #137333;
+    background: #e6f4ea;
+    border: 1px solid #c8e6c9;
+    border-radius: var(--radius-pill);
+    padding: 5px 14px;
+    margin-bottom: 10px;
+  }
+  @media (max-width: 600px) {
+    .feature-list-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <img src="assets/icon48.png" alt="1stTab icon">
+      1stTab
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#features">Features</a>
+      <a href="news.html" class="active">News</a>
+      <a href="request.html">Request</a>
+      <a href="bugs.html">Bugs</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="https://chromewebstore.google.com/detail/1sttab/bigolehnkpljdbocpkljjmkkocefinbh?authuser=0&hl=en" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Add to Chrome</a>
+    </div>
+  </div>
+</header>
+
+<div class="page-wrap" style="max-width:860px">
+
+  <!-- Founder personal note -->
+  <section class="creator-note" style="border-radius:var(--radius-lg);margin-bottom:28px;border:1px solid rgba(246,197,90,.35)">
+    <div class="creator-note-inner" style="padding:32px 32px 36px">
+      <div>
+        <div class="creator-note-label">👋 From the creator</div>
+        <h2 style="font-size:20px;margin-bottom:12px">Built for myself. Shared with everyone.</h2>
+        <p>
+          I wanted a new tab that actually does stuff. Couldn't find one I liked, so I built it.
+          I use 1stTab every day and keep adding features I personally want — the roadmap is my to-do list.
+        </p>
+        <p>
+          It's open beta, so <strong>Plus is free right now</strong> — use code
+          <strong style="font-family:'Roboto Mono',monospace;font-size:15px;color:var(--amber);background:var(--amber-light);padding:2px 8px;border-radius:4px">1STTAB-BETA-PLUS</strong>
+          in Settings → Plus. I'll post 30 days notice here before that changes.
+        </p>
+        <p>
+          Bugs? <a href="bugs.html">Tell me.</a> Feature ideas? <a href="request.html">Tell me louder.</a> Coffee? Always appreciated. ☕
+        </p>
+        <div class="creator-note-actions" style="margin-top:20px">
+          <a href="https://chromewebstore.google.com/detail/1sttab/bigolehnkpljdbocpkljjmkkocefinbh?authuser=0&hl=en" class="btn btn-primary" target="_blank" rel="noopener">Add to Chrome — free</a>
+          <a href="https://www.buymeacoffee.com/" class="btn btn-coffee" target="_blank" rel="noopener">☕ Buy me a coffee</a>
+          <a href="bugs.html" class="btn btn-outline btn-sm">Report a Bug</a>
+          <a href="request.html" class="btn btn-outline btn-sm">Request a Feature</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- V1.0 Release entry -->
+  <div class="page-card">
+    <div class="version-hero">
+      <div>
+        <div class="version-badge">
+          <svg width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="4" fill="#137333"/></svg>
+          Latest Release
+        </div>
+        <h1 style="font-size:28px;font-weight:500;color:var(--text);margin-bottom:6px">v1.0 — Initial Launch</h1>
+        <p class="page-meta" style="margin-bottom:0">May 6, 2026 · Chrome Web Store</p>
+      </div>
+      <a href="https://chromewebstore.google.com/detail/1sttab/bigolehnkpljdbocpkljjmkkocefinbh?authuser=0&hl=en" class="btn btn-primary" target="_blank" rel="noopener" style="white-space:nowrap;flex-shrink:0">
+        Install Now
+      </a>
+    </div>
+
+    <p style="font-size:15px;line-height:1.7;color:var(--text-2);margin-bottom:28px">
+      The first public release of 1stTab. Built in a weekend, shipped to the Chrome Web Store with
+      bookmarks, world clocks, weather, and eight arcade themes. Everything stored in localStorage, React 18 + Babel, Manifest V2.
+    </p>
+
+    <div class="feature-list-grid">
+
+      <!-- LEFT COLUMN -->
+      <div>
+        <div class="feature-list-section">
+          <h4>Dashboard</h4>
+          <ul>
+            <li>Two-column widget layout</li>
+            <li>Drag-and-drop widget reordering</li>
+            <li>Custom greeting with your display name</li>
+            <li>Google search bar in the top bar</li>
+            <li>Background picker — 6 built-in gradients + upload your own (up to 5)</li>
+            <li>Settings dialog for theme, background, profile, and weather</li>
+          </ul>
+        </div>
+
+        <div class="feature-list-section">
+          <h4>Bookmarks</h4>
+          <ul>
+            <li>Visual grid with favicon icons</li>
+            <li>List view toggle</li>
+            <li>Folder tabs for organisation</li>
+            <li>Pinned strip for quick-access shortcuts</li>
+            <li>Live filter / search</li>
+            <li>Separate Bookmarks Manager page — tree view, drag-reorder, import/export JSON</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div>
+        <div class="feature-list-section">
+          <h4>Widgets</h4>
+          <ul>
+            <li><strong>World Clocks</strong> — local time + up to 3 additional time zones</li>
+            <li><strong>Weather</strong> — current conditions + 5-day forecast, °C/°F toggle (Open-Meteo)</li>
+          </ul>
+        </div>
+
+        <div class="feature-list-section">
+          <h4>Themes</h4>
+          <ul>
+            <li>Material Light</li>
+            <li>Material Dark</li>
+            <li>Arcade Mode — 8 retro cabinet palettes with CRT scanline effect: Synthwave, Pac-Maze, Game Boy, Galaga, Tron, Hot Lava, Space Invaders, Donkey Kong</li>
+          </ul>
+        </div>
+
+        <div class="feature-list-section">
+          <h4>Technical</h4>
+          <ul>
+            <li>Chrome Manifest V2 (migrated to V3 the following day)</li>
+            <li>React 18 + Babel, all data in localStorage</li>
+            <li>Dedicated pages: Bookmarks Manager, Settings</li>
+          </ul>
+        </div>
+      </div>
+
+    </div><!-- /grid -->
+
+    <div style="margin-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+      <p style="font-size:14px;color:var(--text-3);margin:0">More on the way — <a href="request.html">tell me what you want.</a></p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a href="https://chromewebstore.google.com/detail/1sttab/bigolehnkpljdbocpkljjmkkocefinbh?authuser=0&hl=en" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Install now</a>
+        <a href="https://www.buymeacoffee.com/" class="btn btn-coffee btn-sm" target="_blank" rel="noopener">☕ Buy me a coffee</a>
+      </div>
+    </div>
+
+  </div><!-- /page-card -->
+</div>
+
+<footer class="footer">
+  <div class="footer-bottom" style="max-width:var(--max-w);margin:0 auto;padding:24px 24px 0">
+    <span>© 2026 1stTab. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="index.html">Home</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 10), { passive: true });
+</script>
+</body>
+</html>

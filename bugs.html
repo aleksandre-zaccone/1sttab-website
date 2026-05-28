@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Report a Bug — 1stTab</title>
+<meta name="description" content="Found a bug in 1stTab? Let us know so we can fix it.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <img src="assets/icon48.png" alt="1stTab icon">
+      1stTab
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#features">Features</a>
+      <a href="news.html">News</a>
+      <a href="request.html">Request</a>
+      <a href="bugs.html" class="active">Bugs</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="https://chromewebstore.google.com/detail/1sttab/bigolehnkpljdbocpkljjmkkocefinbh?authuser=0&hl=en" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Add to Chrome</a>
+    </div>
+  </div>
+</header>
+
+<div class="page-wrap">
+  <div style="margin-bottom:32px">
+    <div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:#c5221f;background:#fce8e6;padding:4px 12px;border-radius:9999px;margin-bottom:16px">Bug Reports</div>
+    <h1 class="page-title">Report a Bug</h1>
+    <p style="font-size:16px;color:var(--text-2);margin-top:6px">Found something that isn't working right? Good bug reports help us fix issues faster. Please include as much detail as possible.</p>
+  </div>
+
+  <div class="page-card">
+    <div class="callout" style="border-left-color:#e37400;background:#fef3e2">
+      <strong>Before submitting:</strong> Try refreshing the page or restarting Chrome. If the issue persists, please fill out the form below.
+    </div>
+
+    <!--
+      FORMSPREE SETUP (5 minutes):
+      1. Go to https://formspree.io → New Form → give it a name (e.g. "1stTab Bug Reports")
+      2. Copy the endpoint URL (looks like https://formspree.io/f/xabcdefg)
+      3. Replace the action below with that URL
+      4. Connect Google Sheets: Formspree dashboard → Integrations → Google Sheets
+         Bug reports land in a Sheet automatically — easy to triage.
+    -->
+    <form class="form" id="bugForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="bug-name">Your name</label>
+          <input class="form-input" type="text" id="bug-name" name="name" placeholder="Alex Johnson" autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="bug-email">Email address <strong style="color:var(--blue)">*</strong></label>
+          <div class="form-sublabel">So we can follow up with a fix or ask questions</div>
+          <input class="form-input" type="email" id="bug-email" name="email" placeholder="alex@example.com" required autocomplete="email">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="bug-area">Where does the bug occur? <strong style="color:var(--blue)">*</strong></label>
+        <select class="form-select" id="bug-area" name="area" required>
+          <option value="">Select…</option>
+          <option value="dashboard">Dashboard</option>
+          <option value="bookmarks">Bookmarks widget</option>
+          <option value="notes">Notes widget</option>
+          <option value="todo">To-Do widget</option>
+          <option value="clocks">World Clocks</option>
+          <option value="weather">Weather widget</option>
+          <option value="pomodoro">Pomodoro timer</option>
+          <option value="crypto">Crypto / FX / Stocks</option>
+          <option value="history">History widget</option>
+          <option value="panel">Side Panel</option>
+          <option value="ai">AI Assistant</option>
+          <option value="settings">Settings</option>
+          <option value="manager">Bookmarks Manager</option>
+          <option value="backup">Drive Backup / Plus</option>
+          <option value="other">Other / Not sure</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="bug-severity">Severity <strong style="color:var(--blue)">*</strong></label>
+        <select class="form-select" id="bug-severity" name="severity" required>
+          <option value="">Select…</option>
+          <option value="critical">Critical — extension is unusable / data lost</option>
+          <option value="major">Major — feature is broken or frequently crashing</option>
+          <option value="minor">Minor — visual issue or occasional glitch</option>
+          <option value="cosmetic">Cosmetic — something looks slightly off</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="bug-title">Bug summary <strong style="color:var(--blue)">*</strong></label>
+        <div class="form-sublabel">A short, clear description (e.g. "Crypto widget shows stale prices after 1 hour")</div>
+        <input class="form-input" type="text" id="bug-title" name="title" placeholder="Short description of the bug" required maxlength="150">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="bug-steps">Steps to reproduce <strong style="color:var(--blue)">*</strong></label>
+        <div class="form-sublabel">List the exact steps that cause the bug. Start with step 1.</div>
+        <textarea class="form-textarea" id="bug-steps" name="steps" placeholder="1. Open a new tab&#10;2. Click on the Weather widget&#10;3. …" required style="min-height:120px"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="bug-expected">Expected behavior</label>
+        <input class="form-input" type="text" id="bug-expected" name="expected" placeholder="What should have happened?">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="bug-actual">Actual behavior <strong style="color:var(--blue)">*</strong></label>
+        <input class="form-input" type="text" id="bug-actual" name="actual" placeholder="What actually happened?" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="bug-env">Chrome version &amp; OS</label>
+        <div class="form-sublabel">Find your Chrome version at chrome://settings/help</div>
+        <input class="form-input" type="text" id="bug-env" name="environment" placeholder="e.g. Chrome 124 on macOS 14.4">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="bug-plus">Are you a Plus user?</label>
+        <select class="form-select" id="bug-plus" name="plus">
+          <option value="">Not sure / prefer not to say</option>
+          <option value="yes">Yes, I have 1stTab Plus</option>
+          <option value="no">No, I'm on the free plan</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="bug-extra">Additional notes</label>
+        <textarea class="form-textarea" id="bug-extra" name="extra" placeholder="Console errors, screenshots description, workaround you found, etc." style="min-height:80px"></textarea>
+      </div>
+
+      <div style="padding-top:8px;border-top:1px solid var(--border)">
+        <button type="submit" class="btn btn-primary form-submit">Send Bug Report</button>
+        <p style="font-size:13px;color:var(--text-3);margin-top:12px">Or email us directly at <a href="mailto:aablotia@ablotia.com">aablotia@ablotia.com</a>.</p>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-bottom" style="max-width:var(--max-w);margin:0 auto;padding:24px 24px 0">
+    <span>© 2026 1stTab. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="index.html">Home</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 10), { passive: true });
+</script>
+</body>
+</html>

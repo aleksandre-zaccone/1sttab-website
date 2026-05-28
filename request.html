@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Request a Feature — 1stTab</title>
+<meta name="description" content="Have an idea for 1stTab? Submit a feature request and help shape the roadmap.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <img src="assets/icon48.png" alt="1stTab icon">
+      1stTab
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#features">Features</a>
+      <a href="news.html">News</a>
+      <a href="request.html" class="active">Request</a>
+      <a href="bugs.html">Bugs</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="https://chromewebstore.google.com/detail/1sttab/bigolehnkpljdbocpkljjmkkocefinbh?authuser=0&hl=en" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Add to Chrome</a>
+    </div>
+  </div>
+</header>
+
+<div class="page-wrap">
+  <div style="margin-bottom:32px">
+    <div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--blue);background:var(--blue-light);padding:4px 12px;border-radius:9999px;margin-bottom:16px">Ideas &amp; Feedback</div>
+    <h1 class="page-title">Request a Feature</h1>
+    <p style="font-size:16px;color:var(--text-2);margin-top:6px">Have an idea that would make 1stTab better? We'd love to hear it. Popular requests are prioritized in the roadmap.</p>
+  </div>
+
+  <div class="page-card">
+    <p style="font-size:14px;color:var(--text-2);margin-bottom:24px">All fields marked <strong style="color:var(--blue)">*</strong> are required. We aim to respond within 3 business days.</p>
+
+    <!--
+      FORMSPREE SETUP (5 minutes):
+      1. Go to https://formspree.io → New Form → give it a name
+      2. Copy the endpoint URL (looks like https://formspree.io/f/xabcdefg)
+      3. Replace the action below with that URL
+      4. Connect a Google Sheet in Formspree dashboard → Integrations → Google Sheets
+         Every submission will appear as a new row automatically.
+      Until then, submissions open the email client as a fallback.
+    -->
+    <form class="form" id="requestForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="req-name">Your name <strong style="color:var(--blue)">*</strong></label>
+          <input class="form-input" type="text" id="req-name" name="name" placeholder="Alex Johnson" required autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="req-email">Email address <strong style="color:var(--blue)">*</strong></label>
+          <input class="form-input" type="email" id="req-email" name="email" placeholder="alex@example.com" required autocomplete="email">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="req-area">Feature area <strong style="color:var(--blue)">*</strong></label>
+        <select class="form-select" id="req-area" name="area" required>
+          <option value="">Select an area…</option>
+          <option value="dashboard">Dashboard &amp; Layout</option>
+          <option value="bookmarks">Bookmarks</option>
+          <option value="notes">Notes &amp; To-Do</option>
+          <option value="clocks">World Clocks</option>
+          <option value="weather">Weather</option>
+          <option value="finance">Finance (Crypto, FX, Stocks)</option>
+          <option value="pomodoro">Pomodoro &amp; Productivity</option>
+          <option value="panel">Side Panel</option>
+          <option value="ai">AI Assistant</option>
+          <option value="themes">Themes &amp; Appearance</option>
+          <option value="plus">Plus / Subscription</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="req-title">Feature title <strong style="color:var(--blue)">*</strong></label>
+        <div class="form-sublabel">A short, clear title for your idea (e.g. "Dark mode for bookmarks grid")</div>
+        <input class="form-input" type="text" id="req-title" name="title" placeholder="Short, descriptive title" required maxlength="120">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="req-desc">Description <strong style="color:var(--blue)">*</strong></label>
+        <div class="form-sublabel">Describe what you'd like and why it would be useful. The more detail, the better.</div>
+        <textarea class="form-textarea" id="req-desc" name="description" placeholder="Describe your feature request in detail…" required style="min-height:140px"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="req-usecase">Your use case</label>
+        <div class="form-sublabel">How would this feature fit into your workflow? (optional)</div>
+        <textarea class="form-textarea" id="req-usecase" name="usecase" placeholder="e.g. I manage bookmarks for 5 projects and need a way to…" style="min-height:80px"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="req-priority">How important is this to you?</label>
+        <select class="form-select" id="req-priority" name="priority">
+          <option value="">Select…</option>
+          <option value="nice-to-have">Nice to have</option>
+          <option value="important">Important — I'd use it often</option>
+          <option value="critical">Critical — I need this to use 1stTab fully</option>
+        </select>
+      </div>
+
+      <div style="padding-top:8px;border-top:1px solid var(--border)">
+        <button type="submit" class="btn btn-primary form-submit">Send Feature Request</button>
+        <p style="font-size:13px;color:var(--text-3);margin-top:12px">Or email us directly at <a href="mailto:aablotia@ablotia.com">aablotia@ablotia.com</a>.</p>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-bottom" style="max-width:var(--max-w);margin:0 auto;padding:24px 24px 0">
+    <span>© 2026 1stTab. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="index.html">Home</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 10), { passive: true });
+</script>
+</body>
+</html>
