@@ -921,8 +921,8 @@ strong { font-weight: 500; color: var(--text); }
 
 /* ─── Creator Note / Beta Banner ───────────────────────────────────────── */
 .creator-note {
-  background: linear-gradient(135deg, #fffbf0 0%, #fff8ee 100%);
-  border-bottom: 1px solid rgba(246,197,90,.35);
+  background: linear-gradient(135deg, #fff5f5 0%, #fff0f0 100%);
+  border-bottom: 1px solid rgba(220,60,60,.2);
 }
 .creator-note-inner {
   max-width: var(--max-w);
@@ -939,22 +939,22 @@ strong { font-weight: 500; color: var(--text); }
   gap: 6px;
   font-size: 11px;
   font-weight: 700;
-  color: var(--amber);
+  color: #c0392b;
   text-transform: uppercase;
   letter-spacing: .1em;
   margin-bottom: 14px;
 }
 .creator-note h2 {
   font-size: 22px;
-  font-weight: 500;
-  color: var(--text);
+  font-weight: 600;
+  color: #b03020;
   margin-bottom: 12px;
   line-height: 1.35;
 }
 .creator-note p {
   font-size: 15px;
   line-height: 1.7;
-  color: var(--text-2);
+  color: #6b2020;
   margin-bottom: 12px;
   max-width: 640px;
 }
@@ -968,7 +968,7 @@ strong { font-weight: 500; color: var(--text); }
   flex-direction: column;
   gap: 6px;
 }
-.beta-code-label { font-size: 11px; color: rgba(255,255,255,.45); font-weight: 500; letter-spacing: .06em; text-transform: uppercase; }
+.beta-code-label { font-size: 11px; color: rgba(255,200,200,.7); font-weight: 500; letter-spacing: .06em; text-transform: uppercase; }
 .beta-code-value {
   font-family: 'Roboto Mono', monospace;
   font-size: 22px;
@@ -1012,20 +1012,20 @@ strong { font-weight: 500; color: var(--text); }
 }
 /* Disclaimer in terms / legal pages */
 .founder-callout {
-  background: linear-gradient(135deg, #fffbf0, #fff8ee);
-  border: 1px solid rgba(246,197,90,.5);
+  background: linear-gradient(135deg, #fff5f5, #fff0f0);
+  border: 1px solid rgba(220,60,60,.25);
   border-radius: var(--radius);
   padding: 20px 22px;
   margin-bottom: 28px;
   font-size: 14.5px;
   line-height: 1.7;
-  color: var(--text-2);
+  color: #6b2020;
 }
-.founder-callout strong { color: var(--text); font-weight: 600; }
+.founder-callout strong { color: #b03020; font-weight: 600; }
 .founder-callout .fc-title {
   font-size: 15px;
   font-weight: 600;
-  color: var(--amber);
+  color: #c0392b;
   margin-bottom: 8px;
   display: block;
 }
