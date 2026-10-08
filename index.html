@@ -2,546 +2,213 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>1stTab — Your Smarter New Tab</title>
-<meta name="description" content="1stTab is a feature-rich Chrome new-tab dashboard with bookmarks, world clocks, weather, finance widgets, AI assistant, and more.">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" href="assets/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500&family=Roboto+Mono&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>1stTab v2 — Your bookmarks, back in focus</title>
+<meta name="description" content="A focused Chrome bookmark manager with folders, tags, search, card and list views. Version 2.0 is coming soon. Google Drive and cross-account sync are planned.">
+<meta name="application-name" content="1stTab">
+<meta name="theme-color" content="#f7f8fa">
+<meta name="google-site-verification" content="NJ5g8DlZnORgyv9Ba-MatWQXtFF1xv9v6YgSDFc41xQ">
+<link rel="icon" href="assets/favicon.png">
+<link rel="canonical" href="https://1sttab-app.web.app/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="1stTab v2 — Your bookmarks, back in focus">
+<meta property="og:description" content="A focused Chrome bookmark manager with folders, tags, search, card and list views. Version 2.0 is coming soon. Google Drive and cross-account sync are planned.">
+<meta property="og:url" content="https://1sttab-app.web.app/">
+<meta property="og:image" content="https://1sttab-app.web.app/assets/bookmark-v2-list.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/site-v2.css">
+<script src="assets/site-v2.js" defer></script>
 </head>
-<body>
-
-<!-- ── Navigation ── -->
+<body class=""><a class="skip-link" href="#main">Skip to content</a>
 <header class="nav" id="nav">
-  <div class="nav-inner">
-    <a class="nav-logo" href="index.html">
-      <img src="assets/icon48.png" alt="1stTab icon">
-      1stTab
-    </a>
-    <nav class="nav-links">
-      <a href="index.html" class="active">Home</a>
-      <a href="#features">Features</a>
-      <a href="news.html">News</a>
-      <a href="request.html">Request</a>
-      <a href="bugs.html">Bugs</a>
-      <a href="terms.html">Terms</a>
-      <a href="privacy.html">Privacy</a>
-    </nav>
-    <div class="nav-cta">
-      <a href="https://chromewebstore.google.com/detail/1sttab/bigolehnkpljdbocpkljjmkkocefinbh?authuser=0&hl=en" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
-        Add to Chrome — it's free
-      </a>
-    </div>
-  </div>
+<div class="nav-inner"><a class="nav-logo" href="index.html" aria-label="1stTab home"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></span><span>1st<span class="logo-accent">Tab</span></span></a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+<nav class="nav-links" id="site-menu" aria-label="Main navigation"><a href="index.html#features">Features</a><a href="guide.html">How it works</a><a href="index.html#roadmap">Roadmap</a><a href="news.html">News</a></nav>
+<a class="launch-pill" href="news-bookmark-focus.html#launch"><span class="status-dot"></span>v2 · Coming soon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
 </header>
-
-<!-- ── Hero ── -->
-<section class="hero">
-  <div class="hero-text">
-    <div class="hero-eyebrow">
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#1a73e8" opacity=".2"/><circle cx="7" cy="7" r="3" fill="#1a73e8"/></svg>
-      Chrome Extension · Free + Plus
-    </div>
-    <h1 class="t-hero hero-title">Your smarter<br>new tab.</h1>
-    <p class="hero-sub">A beautiful, fully-featured dashboard that replaces your new tab. Bookmarks, clocks, weather, finance, AI assistant, and more — all in one page.</p>
-    <div class="hero-actions">
-      <a href="https://chromewebstore.google.com/detail/1sttab/bigolehnkpljdbocpkljjmkkocefinbh?authuser=0&hl=en" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Add to Chrome — free
-      </a>
-      <a href="#features" class="btn btn-outline btn-lg">Explore features</a>
-    </div>
-  </div>
-
-  <div class="hero-mockup">
-    <div class="browser">
-      <div class="browser-bar">
-        <div class="browser-dots"><span></span><span></span><span></span></div>
-        <div class="browser-url">chrome://newtab</div>
-      </div>
-      <img src="assets/screenshots/main_v1.0.png" alt="1stTab dashboard" style="width:100%;display:block;border-radius:0 0 11px 11px">
-    </div>
-  </div>
+<main id="main">
+<section class="hero container"><a class="eyebrow announcement-pill" href="news-bookmark-focus.html"><span class="status-dot"></span> A new chapter for 1stTab <span class="pill-version">V2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+<h1>Your bookmarks,<br><span>back in focus.</span></h1>
+<p class="hero-sub">Give every good link a place. Organize your Chrome bookmarks<br class="desktop-br"> with folders, tags, and a workspace that feels like yours.</p>
+<div class="hero-actions"><a href="#workspace" class="btn btn-primary">Explore the new library <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a><a href="news-bookmark-focus.html" class="btn btn-outline">Read our next chapter</a></div>
+<div class="hero-facts"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg> Your existing bookmarks</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg> No account required</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg> Coming soon to Chrome</span></div>
 </section>
-
-<!-- ── Creator Note / Beta Disclaimer ── -->
-<section class="creator-note">
-  <div class="creator-note-inner">
-    <div>
-      <div class="creator-note-label">👋 From the creator</div>
-      <h2>Built for myself. Shared with everyone.</h2>
-      <p>
-        I wanted a new tab that actually does stuff. Couldn't find one I liked, so I built it.
-        I use 1stTab every day and keep adding features I personally want — the roadmap is basically my to-do list. You're welcome to <a href="request.html">add to it</a>.
-      </p>
-
-      <div class="beta-code-block">
-        <span class="beta-code-label">🎁 Open Beta — Plus is free right now</span>
-        <span class="beta-code-value">1STTAB-BETA-PLUS</span>
-        <span class="beta-code-sub">Enter this code in Settings → Plus to unlock everything, no credit card needed.</span>
-      </div>
-
-      <p>
-        When the major features are solid, the free code goes away — with <strong>30 days notice</strong> posted here first.
-        Found a bug or want a feature? <a href="bugs.html">Tell me</a> — I read everything.
-      </p>
-
-      <div class="creator-note-actions">
-        <a href="https://chromewebstore.google.com/detail/1sttab/bigolehnkpljdbocpkljjmkkocefinbh?authuser=0&hl=en" class="btn btn-primary" target="_blank" rel="noopener">Add to Chrome — free</a>
-        <a href="https://www.buymeacoffee.com/" class="btn btn-coffee" target="_blank" rel="noopener">☕ Buy me a coffee</a>
-        <a href="bugs.html" class="btn btn-outline btn-sm">Report a Bug</a>
-        <a href="request.html" class="btn btn-outline btn-sm">Request a Feature</a>
-      </div>
-    </div>
-
-    <div class="creator-note-aside">
-      <div class="creator-aside-title">What's included in v1.0</div>
-      <div class="creator-aside-list">
-        <div class="creator-aside-item">10 dashboard widgets</div>
-        <div class="creator-aside-item">6-tab side panel</div>
-        <div class="creator-aside-item">Focus Mode + Global Search</div>
-        <div class="creator-aside-item">Bookmarks Manager</div>
-        <div class="creator-aside-item">Arcade, Light &amp; Dark themes</div>
-        <div class="creator-aside-item">AI Assistant (Claude, GPT, Gemini)</div>
-        <div class="creator-aside-item">Google Calendar &amp; Tasks (Plus)</div>
-        <div class="creator-aside-item">Drive cloud backup (Plus)</div>
-        <div class="creator-aside-item">Stock Quotes + Custom CSS (Plus)</div>
-        <div class="creator-aside-item">Analog clock faces (Plus)</div>
-        <div class="creator-aside-item">Smart AI bookmark tagging (Plus)</div>
-        <a href="news.html" style="font-size:13px;color:var(--blue);margin-top:8px;display:block">See full feature list →</a>
-      </div>
-    </div>
-  </div>
+<section class="container product-section" id="workspace" aria-labelledby="workspace-heading">
+<div class="product-topline">
+<div><span class="mini-label">MEET YOUR NEW TAB</span>
+<h2 id="workspace-heading">A clear view of everything you save.</h2>
+</div>
+<div class="preview-switch" role="group" aria-label="Product screenshot view"><button type="button" data-preview="list" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5h13M8 12h13M8 19h13M3 5h.01M3 12h.01M3 19h.01"/></svg>List</button><button type="button" data-preview="cards" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h7v7H3V3Zm11 0h7v7h-7V3ZM3 14h7v7H3v-7Zm11 0h7v7h-7v-7Z"/></svg>Cards</button></div>
+</div>
+<figure class="product-window">
+<div class="window-bar">
+<div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg>1stTab · Bookmark library</span><span class="window-version">2.0</span></div>
+<img id="workspace-image" src="assets/bookmark-v2-list.png" width="1440" height="900" alt="1stTab v2 list view with a nested folder tree, bookmark tags, search and compact rows" fetchpriority="high">
+<figcaption><span id="preview-caption">List view · Enterprise theme</span><span>Product preview with sample bookmarks</span></figcaption>
+</figure>
+<div class="under-preview"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/></svg>A place for every project</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 21l-5-5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0"/></svg>Find it by more than its title</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h18v16H3V4Zm12 0v16"/></svg>Ready in a new tab or side panel</span></div>
 </section>
-
-<!-- ── Features Section ── -->
-<section class="features-section" id="features">
-  <div class="section-header">
-    <h2 class="t-title">What's in v1.0 — and what's next</h2>
-    <p class="t-body">Live features are available right now. Coming soon features are already built and on their way.</p>
-  </div>
-
-  <!-- Filter Bar -->
-  <div class="filter-wrap">
-    <div class="filter-inner" id="filterBar">
-      <button class="filter-pill active" data-target="overview">Overview</button>
-      <button class="filter-pill" data-target="bookmarks">Bookmarks</button>
-      <button class="filter-pill" data-target="clocks">World Clocks</button>
-      <button class="filter-pill" data-target="weather">Weather</button>
-      <div class="filter-divider"></div>
-      <button class="filter-pill cs" data-target="notes">Notes &amp; Tasks</button>
-      <button class="filter-pill cs" data-target="finance">Finance</button>
-      <button class="filter-pill cs" data-target="productivity">Pomodoro</button>
-      <button class="filter-pill cs" data-target="panel">Side Panel</button>
-      <button class="filter-pill cs" data-target="ai">AI Assistant</button>
-      <button class="filter-pill cs" data-target="plus">Plus</button>
-    </div>
-  </div>
-
-  <!-- Feature Cards -->
-  <div class="features-cards">
-
-    <!-- ══ V1.0 LIVE FEATURES ══ -->
-
-    <!-- 1: Overview -->
-    <div class="feature-card" id="card-overview">
-      <div class="feature-text">
-        <div class="feature-kicker">v1.0 · Live</div>
-        <h3 class="t-h3">A beautiful dashboard<br>every time you open a tab</h3>
-        <p class="t-body">1stTab replaces your new tab with a two-column widget layout. Drag widgets between columns, toggle what you need, pick a theme, and set a custom background. Your tab, your way.</p>
-        <ul class="feature-bullets">
-          <li class="feature-bullet">Drag-and-drop widget layout</li>
-          <li class="feature-bullet">Light, Dark, and Arcade themes (8 cabinet palettes)</li>
-          <li class="feature-bullet">Background picker — 6 gradients + upload your own</li>
-          <li class="feature-bullet">Custom greeting with your name</li>
-          <li class="feature-bullet">Google, DuckDuckGo, Bing, Brave search engine</li>
-        </ul>
-      </div>
-      <div class="feature-visual screenshot">
-        <img src="assets/screenshots/main_v1.0.png" alt="1stTab dashboard">
-      </div>
-    </div>
-
-    <!-- 2: Bookmarks -->
-    <div class="feature-card reverse" id="card-bookmarks">
-      <div class="feature-text">
-        <div class="feature-kicker">v1.0 · Live</div>
-        <h3 class="t-h3">Smart bookmarks,<br>front and center</h3>
-        <p class="t-body">Your most-used sites displayed as a visual grid with favicon icons. Filter instantly, switch between grid and list view, organise into folders, and manage everything from a dedicated Bookmarks Manager page.</p>
-        <ul class="feature-bullets">
-          <li class="feature-bullet">Grid and list view with folder tabs</li>
-          <li class="feature-bullet">Live filter — press <kbd style="font-family:monospace;background:var(--bg-alt);padding:2px 5px;border-radius:3px;font-size:12px;border:1px solid var(--border)">/</kbd> to search</li>
-          <li class="feature-bullet">Pinned strip for top shortcuts</li>
-          <li class="feature-bullet">Custom favicon icon picker with presets</li>
-          <li class="feature-bullet">Bookmarks Manager — tree view, drag-reorder, import/export JSON</li>
-        </ul>
-      </div>
-      <div class="feature-visual screenshot">
-        <img src="assets/screenshots/manager_v1.0.png" alt="1stTab Bookmarks Manager">
-      </div>
-    </div>
-
-    <!-- 3: World Clocks -->
-    <div class="feature-card" id="card-clocks">
-      <div class="feature-text">
-        <div class="feature-kicker">v1.0 · Live</div>
-        <h3 class="t-h3">Your time and<br>every time zone</h3>
-        <p class="t-body">Local time is always prominent. Add up to 3 world clocks for teammates or family in any IANA time zone — no app switching needed.</p>
-        <ul class="feature-bullets">
-          <li class="feature-bullet">Large, clear local time display</li>
-          <li class="feature-bullet">Up to 3 additional time zones</li>
-          <li class="feature-bullet">Works across all 8 arcade themes and Light/Dark modes</li>
-        </ul>
-      </div>
-      <div class="feature-visual screenshot widget">
-        <img src="assets/screenshots/time_v1.0.png" alt="1stTab World Clocks">
-      </div>
-    </div>
-
-    <!-- 4: Weather -->
-    <div class="feature-card reverse" id="card-weather">
-      <div class="feature-text">
-        <div class="feature-kicker">v1.0 · Live</div>
-        <h3 class="t-h3">Weather without<br>switching tabs</h3>
-        <p class="t-body">Current conditions and a 5-day forecast pulled from Open-Meteo — no API key, no sign-up. Just set your city and it works.</p>
-        <ul class="feature-bullets">
-          <li class="feature-bullet">Current temperature and conditions</li>
-          <li class="feature-bullet">5-day forecast at a glance</li>
-          <li class="feature-bullet">Celsius / Fahrenheit toggle</li>
-          <li class="feature-bullet">Powered by Open-Meteo — free and open-source</li>
-        </ul>
-      </div>
-      <div class="feature-visual screenshot widget">
-        <img src="assets/screenshots/wheater_v1.0.png" alt="1stTab Weather">
-      </div>
-    </div>
-
-    <!-- ══ COMING SOON ══ -->
-
-    <!-- 5: Notes & Tasks -->
-    <div class="feature-card coming-soon" id="card-notes">
-      <div class="feature-text">
-        <div class="cs-ribbon">🔜 Coming soon</div>
-        <h3 class="t-h3">Notes &amp; To-Do,<br>always open</h3>
-        <p class="t-body">A persistent scratchpad for quick thoughts and a daily task list — both auto-saved and synced across your Chrome devices. No app switching needed.</p>
-        <ul class="feature-bullets">
-          <li class="feature-bullet">Quick Notes scratchpad — saves as you type</li>
-          <li class="feature-bullet">Daily To-Do list with check-off</li>
-          <li class="feature-bullet">Synced via Chrome storage sync</li>
-          <li class="feature-bullet">Custom templates and daily quote widget</li>
-        </ul>
-      </div>
-      <div class="feature-visual" style="position:relative">
-        <div class="browser" style="width:100%;max-width:360px">
-          <div class="browser-bar">
-            <div class="browser-dots"><span></span><span></span><span></span></div>
-            <div class="browser-url">1stTab · Notes</div>
-          </div>
-          <div class="feature-screen" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:14px">
-            <div>
-              <div class="dash-widget-title" style="margin-bottom:8px">Notes</div>
-              <div style="background:rgba(255,255,255,.04);border-radius:8px;padding:10px;border:1px solid rgba(255,255,255,.07)">
-                <div class="note-lines"><div class="note-line"></div><div class="note-line med"></div><div class="note-line short"></div><div class="note-line"></div><div class="note-line med"></div></div>
-              </div>
-            </div>
-            <div>
-              <div class="dash-widget-title" style="margin-bottom:8px">To-Do</div>
-              <div class="todo-items">
-                <div class="todo-item"><div class="todo-check done"></div><span class="todo-label done">Buy groceries</span></div>
-                <div class="todo-item"><div class="todo-check done"></div><span class="todo-label done">Review PR</span></div>
-                <div class="todo-item"><div class="todo-check"></div><span class="todo-label">Finish report</span></div>
-                <div class="todo-item"><div class="todo-check"></div><span class="todo-label">Ship v1.1</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="cs-badge">Coming soon</div>
-      </div>
-    </div>
-
-    <!-- 6: Finance -->
-    <div class="feature-card coming-soon reverse" id="card-finance">
-      <div class="feature-text">
-        <div class="cs-ribbon">🔜 Coming soon</div>
-        <h3 class="t-h3">Crypto, FX &amp; Stocks<br>at a glance</h3>
-        <p class="t-body">Live market data right on your new tab. Crypto prices from CoinGecko, FX rates from ER-API, and stock quotes from Finnhub — refreshed automatically, no premium accounts needed for the first two.</p>
-        <ul class="feature-bullets">
-          <li class="feature-bullet">Crypto Ticker — BTC, ETH, SOL + custom coins (CoinGecko, 60s)</li>
-          <li class="feature-bullet">FX Rates — configure base currency (ER-API, hourly)</li>
-          <li class="feature-bullet">Stock Quotes — Finnhub API key, 5-min refresh <span class="badge-plus">Plus</span></li>
-        </ul>
-      </div>
-      <div class="feature-visual" style="position:relative">
-        <div class="browser" style="width:100%;max-width:360px">
-          <div class="browser-bar">
-            <div class="browser-dots"><span></span><span></span><span></span></div>
-            <div class="browser-url">1stTab · Finance</div>
-          </div>
-          <div class="feature-screen">
-            <div class="finance-chart">
-              <svg viewBox="0 0 320 60" preserveAspectRatio="none">
-                <defs><linearGradient id="cg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4285f4" stop-opacity=".3"/><stop offset="100%" stop-color="#4285f4" stop-opacity="0"/></linearGradient></defs>
-                <path d="M0,45 L40,38 L80,42 L120,30 L160,28 L200,20 L240,24 L280,15 L320,12 L320,60 L0,60 Z" fill="url(#cg2)"/>
-                <path d="M0,45 L40,38 L80,42 L120,30 L160,28 L200,20 L240,24 L280,15 L320,12" fill="none" stroke="#4285f4" stroke-width="2"/>
-              </svg>
-            </div>
-            <div class="finance-tickers">
-              <div class="finance-row"><span class="finance-sym">BTC</span><span class="finance-pr">$67,230</span><span class="finance-chg up">+2.4%</span></div>
-              <div class="finance-row"><span class="finance-sym">ETH</span><span class="finance-pr">$3,521</span><span class="finance-chg dn">−0.8%</span></div>
-              <div class="finance-row"><span class="finance-sym">EUR/USD</span><span class="finance-pr">1.0821</span><span class="finance-chg dn">−0.1%</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="cs-badge">Coming soon</div>
-      </div>
-    </div>
-
-    <!-- 7: Pomodoro -->
-    <div class="feature-card coming-soon" id="card-productivity">
-      <div class="feature-text">
-        <div class="cs-ribbon">🔜 Coming soon</div>
-        <h3 class="t-h3">Pomodoro timer &amp;<br>browser history</h3>
-        <p class="t-body">A full Pomodoro timer with configurable Work / Break phases and an audio chime — plus a History widget showing your last 10 visited pages, pulled locally from Chrome.</p>
-        <ul class="feature-bullets">
-          <li class="feature-bullet">Pomodoro — Work / Short Break / Long Break</li>
-          <li class="feature-bullet">Configurable phase durations + audio chime</li>
-          <li class="feature-bullet">Browser History widget — last 10 pages, fully local</li>
-        </ul>
-      </div>
-      <div class="feature-visual" style="position:relative">
-        <div class="browser" style="width:100%;max-width:360px">
-          <div class="browser-bar">
-            <div class="browser-dots"><span></span><span></span><span></span></div>
-            <div class="browser-url">1stTab · Pomodoro</div>
-          </div>
-          <div class="feature-screen" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start;padding:14px">
-            <div style="text-align:center">
-              <div class="pomo-ring"><div class="pomo-time">24:31</div><div class="pomo-label">Focus</div></div>
-              <div class="pomo-btns"><button class="pomo-btn act">▶ Start</button><button class="pomo-btn def">Reset</button></div>
-            </div>
-            <div>
-              <div class="dash-widget-title" style="margin-bottom:8px">History</div>
-              <div class="hist-list">
-                <div class="hist-row"><div class="hist-fav" style="background:#4285f4"></div>Google Docs</div>
-                <div class="hist-row"><div class="hist-fav" style="background:#333"></div>GitHub</div>
-                <div class="hist-row"><div class="hist-fav" style="background:#ff5722"></div>Figma</div>
-                <div class="hist-row"><div class="hist-fav" style="background:#7c3aed"></div>Notion</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="cs-badge">Coming soon</div>
-      </div>
-    </div>
-
-    <!-- 8: Side Panel -->
-    <div class="feature-card reverse" id="card-panel">
-      <div class="feature-text">
-        <div class="feature-kicker">v3.0 · Live</div>
-        <h3 class="t-h3">Side Panel —<br>open from any tab</h3>
-        <p class="t-body">Press <kbd style="font-family:monospace;background:var(--bg-alt);padding:2px 5px;border-radius:3px;font-size:12px;border:1px solid var(--border)">Alt+Shift+P</kbd> to open the 1stTab side panel anywhere in Chrome. Six tabs: Bookmarks, Tabs Manager, System Monitor, AI, Calendar, and Tasks.</p>
-        <ul class="feature-bullets">
-          <li class="feature-bullet">Tab Manager — search, switch, mute, close, restore tabs</li>
-          <li class="feature-bullet">System Monitor — CPU, RAM, storage (live)</li>
-          <li class="feature-bullet">AI Bookmark Assistant</li>
-          <li class="feature-bullet">Google Calendar &amp; Tasks <span class="badge-plus">Plus</span></li>
-        </ul>
-      </div>
-      <div class="feature-visual" style="position:relative">
-        <div class="browser" style="width:100%;max-width:360px">
-          <div class="browser-bar">
-            <div class="browser-dots"><span></span><span></span><span></span></div>
-            <div class="browser-url">1stTab · Side Panel</div>
-          </div>
-          <div class="feature-screen" style="padding:12px">
-            <div class="panel-shell">
-              <div class="panel-tabs">
-                <div class="panel-tab">🔖</div>
-                <div class="panel-tab act">📅</div>
-                <div class="panel-tab">✅</div>
-                <div class="panel-tab">🗂</div>
-                <div class="panel-tab">⚡</div>
-                <div class="panel-tab">🤖</div>
-              </div>
-              <div class="panel-body">
-                <div class="panel-head">Calendar · Today</div>
-                <div class="cal-event"><div class="cal-dot" style="background:#4285f4;margin-top:3px"></div><div><div class="cal-title">Team standup</div><div class="cal-time">10:00 – 10:15</div></div></div>
-                <div class="cal-event"><div class="cal-dot" style="background:#34a853;margin-top:3px"></div><div><div class="cal-title">Design review</div><div class="cal-time">14:00 – 15:00</div></div></div>
-                <div class="panel-head" style="margin-top:10px">System</div>
-                <div class="sys-row"><span class="sys-label">CPU</span><div class="sys-bar-wrap"><div class="sys-bar" style="width:34%"></div></div><span class="sys-val">34%</span></div>
-                <div class="sys-row"><span class="sys-label">RAM</span><div class="sys-bar-wrap"><div class="sys-bar" style="width:62%;background:#34a853"></div></div><span class="sys-val">62%</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 9: AI Assistant -->
-    <div class="feature-card coming-soon" id="card-ai">
-      <div class="feature-text">
-        <div class="cs-ribbon">🔜 Coming soon</div>
-        <h3 class="t-h3">AI that knows<br>your bookmarks</h3>
-        <p class="t-body">Chat with an AI assistant that has all your bookmark titles and URLs as context. Ask it to find links, suggest categories, or summarize what you've saved. Works with Claude, ChatGPT, or Gemini using your own API key.</p>
-        <ul class="feature-bullets">
-          <li class="feature-bullet">Anthropic Claude, OpenAI GPT, Google Gemini</li>
-          <li class="feature-bullet">Your API key stays local — never sent to us</li>
-          <li class="feature-bullet">Smart Bookmark Tagging — 3 AI tags on save <span class="badge-plus">Plus</span></li>
-        </ul>
-      </div>
-      <div class="feature-visual" style="position:relative">
-        <div class="browser" style="width:100%;max-width:360px">
-          <div class="browser-bar">
-            <div class="browser-dots"><span></span><span></span><span></span></div>
-            <div class="browser-url">1stTab · AI Assistant</div>
-          </div>
-          <div class="feature-screen" style="padding:14px;display:flex;flex-direction:column">
-            <div class="chat">
-              <div class="chat-msg chat-user">Find my design tool bookmarks</div>
-              <div class="chat-msg chat-ai">You have 6 design bookmarks: <strong style="color:rgba(255,255,255,.9)">Figma</strong>, Dribbble, Behance, Coolors, FontJoy, Material Design. Want me to group them?</div>
-            </div>
-            <div class="chat-input"><span class="chat-input-text">Ask about your bookmarks…</span><div class="chat-send">→</div></div>
-          </div>
-        </div>
-        <div class="cs-badge">Coming soon</div>
-      </div>
-    </div>
-
-    <!-- 10: Plus -->
-    <div class="feature-card coming-soon reverse" id="card-plus">
-      <div class="feature-text">
-        <div class="cs-ribbon">🔜 Coming soon</div>
-        <h3 class="t-h3">1stTab Plus —<br>unlock everything</h3>
-        <p class="t-body">Plus removes limits, adds Google Workspace integration, premium widgets, and full customisation. During open beta, use code <strong style="font-family:monospace;color:var(--amber)">1STTAB-BETA-PLUS</strong> to get it free.</p>
-        <ul class="feature-bullets">
-          <li class="feature-bullet">Unlimited clocks, todos, notes &amp; backgrounds</li>
-          <li class="feature-bullet">Google Calendar + Tasks in side panel</li>
-          <li class="feature-bullet">Google Drive cloud backup &amp; restore</li>
-          <li class="feature-bullet">Stock Quotes, Custom CSS, Analog clock faces</li>
-          <li class="feature-bullet">AI Smart Bookmark Tagging</li>
-        </ul>
-      </div>
-      <div class="feature-visual" style="position:relative">
-        <div class="browser" style="width:100%;max-width:360px">
-          <div class="browser-bar">
-            <div class="browser-dots"><span></span><span></span><span></span></div>
-            <div class="browser-url">1stTab · Plus</div>
-          </div>
-          <div class="feature-screen" style="padding:18px">
-            <div class="plus-card">
-              <div class="plus-title">1stTab Plus</div>
-              <div class="plus-feat-list">
-                <div class="plus-feat">Unlimited world clocks</div>
-                <div class="plus-feat">Google Calendar &amp; Tasks</div>
-                <div class="plus-feat">Drive cloud backup</div>
-                <div class="plus-feat">Stock Quotes widget</div>
-                <div class="plus-feat">Custom CSS editor</div>
-                <div class="plus-feat">3 analog clock faces</div>
-                <div class="plus-feat">AI Smart Tagging</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="cs-badge">Coming soon</div>
-      </div>
-    </div>
-
-  </div><!-- /features-cards -->
+<section class="section container" id="features">
+<div class="section-heading">
+<div>
+<p class="mini-label">BUILT AROUND YOUR BOOKMARKS</p>
+<h2>A little order.<br>A better everyday flow.</h2>
+</div>
+<p>From a quick save to a well-kept research library, everything in v2 supports one simple job: keeping useful links within reach.</p>
+</div>
+<div class="feature-grid">
+<article class="feature-card feature-folders">
+<div class="feature-copy"><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/></svg></span>
+<h3>Room for the way you think.</h3>
+<p>Create collections and nested folders. Drag bookmarks between them, sort your links, and resize the tree to fit your library.</p>
+</div>
+<div class="folder-illustration" aria-hidden="true">
+<div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/></svg>Projects<span>12</span></div>
+<div class="branch">
+<div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/></svg>Design inspiration<span>8</span></div>
+<div class="selected"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/></svg>Next big idea<span>4</span></div>
+</div>
+<div class="floating-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> A place to begin</div>
+</div>
+</article>
+<article class="feature-card feature-search">
+<div class="feature-copy"><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 21l-5-5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0"/></svg></span>
+<h3>That link. Found.</h3>
+<p>Search titles, URLs, tags, and notes. Narrow it down by collection, domain, or favorites. Your search stays in reach as you scroll.</p>
+</div>
+<div class="search-illustration" aria-hidden="true">
+<div class="sample-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 21l-5-5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0"/></svg>design research<span>⌘ K</span></div>
+<div class="sample-tags"><span>design</span><span>research</span><span>favorites</span></div>
+<div class="sample-result"><b>F</b>
+<div><strong>A shared canvas for your next idea</strong><small>figma.com · Design</small></div>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></div>
+</div>
+</article>
+<article class="feature-card feature-appearance">
+<div class="feature-copy"><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16M8 3v6M16 9v6M10 15v6"/></svg></span>
+<h3>Make some space for you.</h3>
+<p>Five themes, light and dark modes, adjustable text and icons. Choose a compact list or cards in five different shapes.</p>
+</div>
+<div class="appearance-illustration" aria-hidden="true">
+<div class="color-palette"><i></i><i></i><i></i><i></i><i></i></div>
+<div class="shape-palette"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></span></div>
+<span class="illustration-caption">Your library, your settings.</span></div>
+</article>
+<article class="feature-card feature-recovery">
+<div class="feature-copy"><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10h7M3 10V3m0 7a9 9 0 1 1 2 9"/></svg></span>
+<h3>A little peace of mind.</h3>
+<p>Export your library, preview imports and deletions, and recover supported changes with undo or a saved snapshot.</p>
+</div>
+<div class="recovery-illustration" aria-hidden="true">
+<div class="file-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 3 7v5c0 5 9 9 9 9s9-4 9-9V7l-9-4Zm-4 9 3 3 5-6"/></svg><span>bookmarks.json</span><small>Your library, backed up by you.</small></div>
+<div class="recovery-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10h7M3 10V3m0 7a9 9 0 1 1 2 9"/></svg> Undo last edit</div>
+</div>
+</article>
+</div>
+<div class="detail-grid">
+<article><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h8l10 10-8 8L3 11V3Zm4 4h.01"/></svg>
+<h3>Add context</h3>
+<p>Tags, notes, and favorites keep the reason you saved a link close to the link itself.</p>
+</article>
+<article><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h18v16H3V4Zm12 0v16"/></svg>
+<h3>Keep it beside you</h3>
+<p>Open your library in a new tab or the Chrome side panel while you browse.</p>
+</article>
+<article><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h7v7H3V3Zm11 0h7v7h-7V3ZM3 14h7v7H3v-7Zm11 0h7v7h-7v-7Z"/></svg>
+<h3>Organize in batches</h3>
+<p>Move, tag, or delete selected bookmarks. Review duplicate links and empty folders.</p>
+</article>
+</div>
 </section>
-
-<!-- ── Pricing CTA ── -->
-<section class="pricing-cta">
-  <h2 class="t-title">Start for free. Upgrade when you're ready.</h2>
-  <p class="t-body">The core dashboard is completely free, forever. 1stTab Plus adds Google Workspace integration, unlimited everything, and premium customization.</p>
-  <div class="pricing-actions">
-    <a href="https://chromewebstore.google.com/detail/1sttab/bigolehnkpljdbocpkljjmkkocefinbh?authuser=0&hl=en" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Add to Chrome — free</a>
-    <a href="request.html" class="btn btn-outline btn-lg">Request a feature</a>
-  </div>
+<section class="local-section container">
+<div class="local-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 3 7v5c0 5 9 9 9 9s9-4 9-9V7l-9-4Zm-4 9 3 3 5-6"/></svg></div>
+<div>
+<p class="mini-label">A LOCAL LIBRARY, FIRST</p>
+<h2>Your bookmarks are already yours.</h2>
+<p>1stTab works with your native Chrome bookmarks. The local v2 library needs no account and uploads no bookmark data. Tags, notes, favorites, and preferences stay on this device.</p>
+<a class="text-link" href="privacy.html">Understand your data <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+<div class="local-aside"><span>01</span><strong>Save locally.</strong>
+<p>Chrome’s own bookmark sync follows your browser settings. 1stTab metadata has its own local storage.</p>
+</div>
 </section>
-
-<!-- ── Footer ── -->
+<section class="roadmap-section" id="roadmap">
+<div class="container">
+<div class="section-heading">
+<div>
+<p class="mini-label">WHAT COMES NEXT</p>
+<h2>A focused start.<br>More ways to stay in sync.</h2>
+</div>
+<p>V2 brings the bookmark workspace. After that, we’re planning optional ways to bring your collections with you.</p>
+</div>
+<div class="roadmap-grid">
+<article class="roadmap-card">
+<div class="roadmap-top"><span class="roadmap-number">02 / NEXT CHAPTER</span><span class="planned">Planned</span></div>
+<div class="roadmap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a5 5 0 1 1 0-10 7 7 0 0 1 13 3 4 4 0 0 1-1 7h-4m-6 0 3-3 3 3m-3-3v7"/></svg></div>
+<h3>Sync through Google Drive</h3>
+<p>Connect your own Drive to keep selected bookmark collections and their metadata in sync across your devices.</p>
+<span class="roadmap-note">Optional connection · Not included in v2</span></article>
+<article class="roadmap-card">
+<div class="roadmap-top"><span class="roadmap-number">03 / FURTHER AHEAD</span><span class="planned">Planned</span></div>
+<div class="roadmap-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm6 1a3 3 0 1 0 0-6M3 20v-3a5 5 0 0 1 10 0v3m3-6a5 5 0 0 1 5 5v1"/></svg></div>
+<h3>Sync between Google accounts</h3>
+<p>Bring selected collections between the Google accounts you use, with control over what stays separate and what you sync.</p>
+<span class="roadmap-note">You choose the accounts · Not included in v2</span></article>
+</div>
+<div class="roadmap-foot">
+<p>These features are on the roadmap. Availability and timing will be announced here.</p>
+<a href="request.html" class="text-link">Help shape what’s next <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+</div>
+</section>
+<section class="section container faq-section">
+<div>
+<p class="mini-label">A FEW GOOD QUESTIONS</p>
+<h2>Before you<br>make yourself at home.</h2>
+</div>
+<div class="faq-list">
+<details>
+<summary>Can I install v2 from the Chrome Web Store?</summary>
+<p>V2 is coming soon. We’re preparing the bookmark-focused release and will share the store link here when it is available. A launch date has not been announced.</p>
+</details>
+<details>
+<summary>Will it use my existing Chrome bookmarks?</summary>
+<p>Yes. The extension reads and edits your native Chrome bookmarks. You can organize the library you already have, and your changes appear in Chrome’s bookmark manager.</p>
+</details>
+<details>
+<summary>Does v2 sync my notes and tags?</summary>
+<p>Notes, tags, favorites, and 1stTab settings are local to this device. Native bookmarks may sync through Chrome if you enable Chrome sync. Google Drive sync and sync between Google accounts are planned follow-ups.</p>
+</details>
+<details>
+<summary>What happened to the dashboard features?</summary>
+<p>We’ve chosen to focus the new 1stTab on bookmark management. Weather, clocks, finance, tasks, and other general dashboard widgets are outside the v2 product. <a href="news-bookmark-focus.html">Read the story behind this decision.</a></p>
+</details>
+<details>
+<summary>Can I keep a backup of my library?</summary>
+<p>Yes. Export a local JSON copy from Settings → Library tools. Imports show a preview and add a separate Imported folder. Undo and snapshot recovery help with supported changes; exports are useful before extensive edits.</p>
+</details>
+</div>
+</section>
+<section class="container final-cta">
+<div><span class="mini-label">1STTAB V2 · COMING SOON</span>
+<h2>Keep the links.<br>Find the possibilities.</h2>
+<p>A bookmark manager built for your next good idea.</p>
+</div>
+<a class="btn btn-primary" href="news-bookmark-focus.html">Meet the next 1stTab <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></section>
+</main>
 <footer class="footer">
-  <div class="footer-inner">
-    <div>
-      <div class="footer-brand-name">
-        <img src="assets/icon48.png" alt="">
-        1stTab
-      </div>
-      <p class="footer-desc">A beautiful Chrome new-tab dashboard with bookmarks, clocks, weather, finance, AI, and more.</p>
-      <a href="https://chromewebstore.google.com/detail/1sttab/bigolehnkpljdbocpkljjmkkocefinbh?authuser=0&hl=en" class="btn btn-primary btn-sm" target="_blank" rel="noopener" style="display:inline-flex">Add to Chrome</a>
-    </div>
-    <div>
-      <div class="footer-col-title">Product</div>
-      <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="news.html">What's New</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="footer-col-title">Support</div>
-      <ul class="footer-links">
-        <li><a href="request.html">Request a Feature</a></li>
-        <li><a href="bugs.html">Report a Bug</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="footer-col-title">Legal</div>
-      <ul class="footer-links">
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="terms.html">Terms of Service</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 1stTab. All rights reserved.</span>
-    <div class="footer-bottom-links">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-      <a href="bugs.html">Report a Bug</a>
-    </div>
-  </div>
+<div class="container footer-grid">
+<div class="footer-intro"><a class="nav-logo" href="index.html" aria-label="1stTab home"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></span><span>1st<span class="logo-accent">Tab</span></span></a>
+<p>A thoughtful home for<br>the links worth keeping.</p>
+<span class="footer-release">Version 2.0 · Chrome extension · Coming soon</span></div>
+<div>
+<h2>Explore</h2>
+<a href="index.html#features">Features</a><a href="guide.html">How it works</a><a href="index.html#roadmap">Roadmap</a><a href="news.html">News</a></div>
+<div>
+<h2>Let’s make it better</h2>
+<a href="request.html">Suggest a feature</a><a href="bugs.html">Report a bug</a><a href="mailto:aablotia@ablotia.com">Get in touch</a><a href="https://github.com/aleksandre-zaccone/1stTab" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a></div>
+<div>
+<h2>The details</h2>
+<a href="privacy.html">Privacy</a><a href="terms.html">Terms & conditions</a><a href="LICENSE.txt">MIT license</a></div>
+</div>
+<div class="container footer-bottom"><span>© 2026 1stTab</span><span>Save something good.</span></div>
 </footer>
-
-<script>
-// Nav shadow on scroll
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 10);
-}, { passive: true });
-
-// Filter pill click → smooth scroll to card
-document.querySelectorAll('.filter-pill').forEach(pill => {
-  pill.addEventListener('click', () => {
-    const id = 'card-' + pill.dataset.target;
-    const card = document.getElementById(id);
-    if (!card) return;
-    const navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h'));
-    const filterH = document.querySelector('.filter-wrap').offsetHeight;
-    const top = card.getBoundingClientRect().top + window.scrollY - navH - filterH - 16;
-    window.scrollTo({ top, behavior: 'smooth' });
-  });
-});
-
-// Scroll spy: highlight active pill as you scroll
-const cards = Array.from(document.querySelectorAll('.feature-card[id]'));
-const pills = Array.from(document.querySelectorAll('.filter-pill'));
-
-function getTarget(card) { return card.id.replace('card-', ''); }
-function setPill(target) {
-  pills.forEach(p => p.classList.toggle('active', p.dataset.target === target));
-}
-
-const navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 64;
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) setPill(getTarget(entry.target));
-  });
-}, { rootMargin: `-${navH + 60}px 0px -50% 0px` });
-
-cards.forEach(c => observer.observe(c));
-</script>
 </body>
 </html>
