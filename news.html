@@ -2,323 +2,64 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>What's New — 1stTab</title>
-<meta name="description" content="1stTab v1.0 launch — full feature list and the story behind the extension.">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" href="assets/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500&family=Roboto+Mono&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>
-  .feature-list-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 24px;
-  }
-  .feature-list-section { margin-bottom: 20px; }
-  .feature-list-section h4 {
-    font-size: 13px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    color: var(--text-3);
-    margin-bottom: 8px;
-    margin-top: 16px;
-    padding-bottom: 6px;
-    border-bottom: 1px solid var(--border);
-  }
-  .feature-list-section ul { list-style: none; padding: 0; margin: 0; }
-  .feature-list-section li {
-    font-size: 14px;
-    color: var(--text-2);
-    padding: 5px 0;
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    border-bottom: 1px solid rgba(0,0,0,.04);
-    line-height: 1.45;
-  }
-  .feature-list-section li::before {
-    content: '→';
-    color: var(--blue);
-    font-size: 12px;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-  .plus-tag {
-    font-size: 10px;
-    font-weight: 700;
-    color: var(--amber);
-    background: var(--amber-light);
-    border-radius: 4px;
-    padding: 1px 5px;
-    flex-shrink: 0;
-    align-self: center;
-  }
-  .version-hero {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 24px;
-    margin-bottom: 28px;
-    flex-wrap: wrap;
-  }
-  .version-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 13px;
-    font-weight: 600;
-    color: #137333;
-    background: #e6f4ea;
-    border: 1px solid #c8e6c9;
-    border-radius: var(--radius-pill);
-    padding: 5px 14px;
-    margin-bottom: 10px;
-  }
-  @media (max-width: 600px) {
-    .feature-list-grid { grid-template-columns: 1fr; }
-  }
-</style>
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>News &amp; updates — 1stTab</title>
+<meta name="description" content="Read about 1stTab’s new bookmark-only direction, the upcoming v2 release, and planned Google Drive and cross-account sync.">
+<meta name="application-name" content="1stTab">
+<meta name="theme-color" content="#f7f8fa">
+<meta name="google-site-verification" content="NJ5g8DlZnORgyv9Ba-MatWQXtFF1xv9v6YgSDFc41xQ">
+<link rel="icon" href="assets/favicon.png">
+<link rel="canonical" href="https://1sttab-app.web.app/news">
+<meta property="og:type" content="website">
+<meta property="og:title" content="News &amp; updates — 1stTab">
+<meta property="og:description" content="Read about 1stTab’s new bookmark-only direction, the upcoming v2 release, and planned Google Drive and cross-account sync.">
+<meta property="og:url" content="https://1sttab-app.web.app/news">
+<meta property="og:image" content="https://1sttab-app.web.app/assets/bookmark-v2-list.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/site-v2.css">
+<script src="assets/site-v2.js" defer></script>
 </head>
-<body>
-
+<body class=""><a class="skip-link" href="#main">Skip to content</a>
 <header class="nav" id="nav">
-  <div class="nav-inner">
-    <a class="nav-logo" href="index.html">
-      <img src="assets/icon48.png" alt="1stTab icon">
-      1stTab
-    </a>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="index.html#features">Features</a>
-      <a href="news.html" class="active">News</a>
-      <a href="request.html">Request</a>
-      <a href="bugs.html">Bugs</a>
-      <a href="terms.html">Terms</a>
-      <a href="privacy.html">Privacy</a>
-    </nav>
-    <div class="nav-cta">
-      <a href="https://chromewebstore.google.com/detail/1sttab/bigolehnkpljdbocpkljjmkkocefinbh?authuser=0&hl=en" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Add to Chrome</a>
-    </div>
-  </div>
+<div class="nav-inner"><a class="nav-logo" href="index.html" aria-label="1stTab home"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></span><span>1st<span class="logo-accent">Tab</span></span></a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+<nav class="nav-links" id="site-menu" aria-label="Main navigation"><a href="index.html#features">Features</a><a href="guide.html">How it works</a><a href="index.html#roadmap">Roadmap</a><a href="news.html" aria-current="page">News</a></nav>
+<a class="launch-pill" href="news-bookmark-focus.html#launch"><span class="status-dot"></span>v2 · Coming soon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
 </header>
-
-<div class="page-wrap" style="max-width:860px">
-
-  <!-- Founder personal note -->
-  <section class="creator-note" style="border-radius:var(--radius-lg);margin-bottom:28px;border:1px solid rgba(246,197,90,.35)">
-    <div class="creator-note-inner" style="padding:32px 32px 36px">
-      <div>
-        <div class="creator-note-label">👋 From the creator</div>
-        <h2 style="font-size:20px;margin-bottom:12px">Built for myself. Shared with everyone.</h2>
-        <p>
-          I wanted a new tab that actually does stuff. Couldn't find one I liked, so I built it.
-          I use 1stTab every day and keep adding features I personally want — the roadmap is my to-do list.
-        </p>
-        <p>
-          It's open beta, so <strong>Plus is free right now</strong> — use code
-          <strong style="font-family:'Roboto Mono',monospace;font-size:15px;color:var(--amber);background:var(--amber-light);padding:2px 8px;border-radius:4px">1STTAB-BETA-PLUS</strong>
-          in Settings → Plus. I'll post 30 days notice here before that changes.
-        </p>
-        <p>
-          Bugs? <a href="bugs.html">Tell me.</a> Feature ideas? <a href="request.html">Tell me louder.</a> Coffee? Always appreciated. ☕
-        </p>
-        <div class="creator-note-actions" style="margin-top:20px">
-          <a href="https://chromewebstore.google.com/detail/1sttab/bigolehnkpljdbocpkljjmkkocefinbh?authuser=0&hl=en" class="btn btn-primary" target="_blank" rel="noopener">Add to Chrome — free</a>
-          <a href="https://www.buymeacoffee.com/" class="btn btn-coffee" target="_blank" rel="noopener">☕ Buy me a coffee</a>
-          <a href="bugs.html" class="btn btn-outline btn-sm">Report a Bug</a>
-          <a href="request.html" class="btn btn-outline btn-sm">Request a Feature</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- V3.0 Release entry -->
-  <div class="page-card" style="margin-bottom:28px">
-    <div class="version-hero">
-      <div>
-        <div class="version-badge">
-          <svg width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="4" fill="#137333"/></svg>
-          Latest Release
-        </div>
-        <h1 style="font-size:28px;font-weight:500;color:var(--text);margin-bottom:6px">v3.0 — The Side Panel & Interface Redesign</h1>
-        <p class="page-meta" style="margin-bottom:0">May 28, 2026 · Chrome Web Store</p>
-      </div>
-      <a href="https://chromewebstore.google.com/detail/1sttab/bigolehnkpljdbocpkljjmkkocefinbh?authuser=0&hl=en" class="btn btn-primary" target="_blank" rel="noopener" style="white-space:nowrap;flex-shrink:0">
-        Install Now
-      </a>
-    </div>
-
-    <p style="font-size:15px;line-height:1.7;color:var(--text-2);margin-bottom:28px">
-      A massive visual and functional update to 1stTab. We've switched back to the native Chrome Side Panel API, introduced a space-saving Gmail-style icon navigation bar, fixed page flicker issues, and implemented robust system resources, tab management, and Google integrations for Plus members.
-    </p>
-
-    <div class="feature-list-grid">
-
-      <!-- LEFT COLUMN -->
-      <div>
-        <div class="feature-list-section">
-          <h4>Interface & Navigation</h4>
-          <ul>
-            <li><strong>Gmail-Style Icon Sidebar</strong> — collapsible panel navigation keeping icons visible</li>
-            <li><strong>Drill-down Launcher Grid</strong> — new home screen grid for faster panel navigation</li>
-            <li><strong>Auto-open on Install</strong> — smooth onboarding experience for new users</li>
-            <li><strong>Dynamic Responsive Width</strong> — nav shrinks and expands automatically between 56px and 72px</li>
-          </ul>
-        </div>
-
-        <div class="feature-list-section">
-          <h4>Performance & Visuals</h4>
-          <ul>
-            <li><strong>Zero Flicker Design</strong> — forced background styling (#f6f8fc) to eliminate white screen flashes</li>
-            <li><strong>Clean Layouts</strong> — centered 44x44px navigation buttons, flush edge-to-edge styling</li>
-            <li><strong>State Reset on Load</strong> — panel resets to icons-only state automatically upon reopening</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- RIGHT COLUMN -->
-      <div>
-        <div class="feature-list-section">
-          <h4>Side Panel Features</h4>
-          <ul>
-            <li><strong>Tab Manager</strong> — live search, group muting, and instant tabs switching</li>
-            <li><strong>System Monitor</strong> — live CPU, memory, and storage metrics directly in the sidebar</li>
-            <li><strong>AI Bookmark Assistant</strong> — ask questions and organize your bookmarks locally</li>
-            <li><strong>Google Calendar & Tasks</strong> — premium sidebar agenda integration <span class="plus-tag">Plus</span></li>
-          </ul>
-        </div>
-
-        <div class="feature-list-section">
-          <h4>Technical Architecture</h4>
-          <ul>
-            <li><strong>Chrome Manifest V3</strong> — migrated fully to secure modern extension guidelines</li>
-            <li><strong>Native SidePanel Integration</strong> — globally accessible from any page via shortcut</li>
-            <li><strong>Google Cloud Functions</strong> — backend infrastructure for license and premium sync</li>
-          </ul>
-        </div>
-      </div>
-
-    </div><!-- /grid -->
-
-    <div style="margin-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
-      <p style="font-size:14px;color:var(--text-3);margin:0">Built with ❤️ in open beta.</p>
-      <div style="display:flex;gap:10px;flex-wrap:wrap">
-        <a href="https://chromewebstore.google.com/detail/1sttab/bigolehnkpljdbocpkljjmkkocefinbh?authuser=0&hl=en" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Install now</a>
-        <a href="https://www.buymeacoffee.com/" class="btn btn-coffee btn-sm" target="_blank" rel="noopener">☕ Buy me a coffee</a>
-      </div>
-    </div>
-
-  </div><!-- /page-card -->
-
-  <!-- V1.0 Release entry -->
-  <div class="page-card">
-    <div class="version-hero">
-      <div>
-        <div class="version-badge" style="color:#5f6368;background:#f1f3f4;border-color:#dadce0">
-          <svg width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="4" fill="#5f6368"/></svg>
-          Older Release
-        </div>
-        <h1 style="font-size:28px;font-weight:500;color:var(--text);margin-bottom:6px">v1.0 — Initial Launch</h1>
-        <p class="page-meta" style="margin-bottom:0">May 6, 2026 · Chrome Web Store</p>
-      </div>
-      <a href="https://chromewebstore.google.com/detail/1sttab/bigolehnkpljdbocpkljjmkkocefinbh?authuser=0&hl=en" class="btn btn-primary" target="_blank" rel="noopener" style="white-space:nowrap;flex-shrink:0">
-        Install Now
-      </a>
-    </div>
-
-    <p style="font-size:15px;line-height:1.7;color:var(--text-2);margin-bottom:28px">
-      The first public release of 1stTab. Built in a weekend, shipped to the Chrome Web Store with
-      bookmarks, world clocks, weather, and eight arcade themes. Everything stored in localStorage, React 18 + Babel, Manifest V2.
-    </p>
-
-    <div class="feature-list-grid">
-
-      <!-- LEFT COLUMN -->
-      <div>
-        <div class="feature-list-section">
-          <h4>Dashboard</h4>
-          <ul>
-            <li>Two-column widget layout</li>
-            <li>Drag-and-drop widget reordering</li>
-            <li>Custom greeting with your display name</li>
-            <li>Google search bar in the top bar</li>
-            <li>Background picker — 6 built-in gradients + upload your own (up to 5)</li>
-            <li>Settings dialog for theme, background, profile, and weather</li>
-          </ul>
-        </div>
-
-        <div class="feature-list-section">
-          <h4>Bookmarks</h4>
-          <ul>
-            <li>Visual grid with favicon icons</li>
-            <li>List view toggle</li>
-            <li>Folder tabs for organisation</li>
-            <li>Pinned strip for quick-access shortcuts</li>
-            <li>Live filter / search</li>
-            <li>Separate Bookmarks Manager page — tree view, drag-reorder, import/export JSON</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- RIGHT COLUMN -->
-      <div>
-        <div class="feature-list-section">
-          <h4>Widgets</h4>
-          <ul>
-            <li><strong>World Clocks</strong> — local time + up to 3 additional time zones</li>
-            <li><strong>Weather</strong> — current conditions + 5-day forecast, °C/°F toggle (Open-Meteo)</li>
-          </ul>
-        </div>
-
-        <div class="feature-list-section">
-          <h4>Themes</h4>
-          <ul>
-            <li>Material Light</li>
-            <li>Material Dark</li>
-            <li>Arcade Mode — 8 retro cabinet palettes with CRT scanline effect: Synthwave, Pac-Maze, Game Boy, Galaga, Tron, Hot Lava, Space Invaders, Donkey Kong</li>
-          </ul>
-        </div>
-
-        <div class="feature-list-section">
-          <h4>Technical</h4>
-          <ul>
-            <li>Chrome Manifest V2 (migrated to V3 the following day)</li>
-            <li>React 18 + Babel, all data in localStorage</li>
-            <li>Dedicated pages: Bookmarks Manager, Settings</li>
-          </ul>
-        </div>
-      </div>
-
-    </div><!-- /grid -->
-
-    <div style="margin-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
-      <p style="font-size:14px;color:var(--text-3);margin:0">More on the way — <a href="request.html">tell me what you want.</a></p>
-      <div style="display:flex;gap:10px;flex-wrap:wrap">
-        <a href="https://chromewebstore.google.com/detail/1sttab/bigolehnkpljdbocpkljjmkkocefinbh?authuser=0&hl=en" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Install now</a>
-        <a href="https://www.buymeacoffee.com/" class="btn btn-coffee btn-sm" target="_blank" rel="noopener">☕ Buy me a coffee</a>
-      </div>
-    </div>
-
-  </div><!-- /page-card -->
-</div>
-
+<main id="main">
+<section class="container page-hero">
+<p class="mini-label">NOTES FROM THE MAKER</p>
+<h1>A new chapter.<br><span>A clearer focus.</span></h1>
+<p>Product updates, decisions, and what’s next for your library.</p>
+</section>
+<section class="container news-section">
+<article class="news-feature"><a class="news-art" href="news-bookmark-focus.html" aria-label="Read: The next 1stTab is all about bookmarks"><span class="news-version">2.0</span>
+<div class="news-art-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></div>
+<span class="news-art-label">A NEW CHAPTER FOR YOUR BOOKMARKS</span></a>
+<div class="news-content"><span class="article-meta"><time datetime="2026-10-06">October 6, 2026</time> · Product direction</span>
+<h2><a href="news-bookmark-focus.html">The next 1stTab is all about bookmarks.</a></h2>
+<p>We’re bringing our attention back to saving, organizing, and finding the links that matter. A rebuilt workspace is on the way, with a simpler purpose and a clear roadmap.</p>
+<a href="news-bookmark-focus.html" class="text-link">Read the announcement <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+</article>
+<div class="news-followup"><span class="status-label"><span class="status-dot"></span>V2 release ahead</span>
+<p>The Chrome Web Store launch is coming soon. Google Drive sync and sync between Google accounts are planned for later releases.</p>
+<a href="index.html#roadmap" class="text-link">See the roadmap <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+</section>
+</main>
 <footer class="footer">
-  <div class="footer-bottom" style="max-width:var(--max-w);margin:0 auto;padding:24px 24px 0">
-    <span>© 2026 1stTab. All rights reserved.</span>
-    <div class="footer-bottom-links">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-      <a href="index.html">Home</a>
-    </div>
-  </div>
+<div class="container footer-grid">
+<div class="footer-intro"><a class="nav-logo" href="index.html" aria-label="1stTab home"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></span><span>1st<span class="logo-accent">Tab</span></span></a>
+<p>A thoughtful home for<br>the links worth keeping.</p>
+<span class="footer-release">Version 2.0 · Chrome extension · Coming soon</span></div>
+<div>
+<h2>Explore</h2>
+<a href="index.html#features">Features</a><a href="guide.html">How it works</a><a href="index.html#roadmap">Roadmap</a><a href="news.html">News</a></div>
+<div>
+<h2>Let’s make it better</h2>
+<a href="request.html">Suggest a feature</a><a href="bugs.html">Report a bug</a><a href="mailto:aablotia@ablotia.com">Get in touch</a><a href="https://github.com/aleksandre-zaccone/1stTab" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a></div>
+<div>
+<h2>The details</h2>
+<a href="privacy.html">Privacy</a><a href="terms.html">Terms & conditions</a><a href="LICENSE.txt">MIT license</a></div>
+</div>
+<div class="container footer-bottom"><span>© 2026 1stTab</span><span>Save something good.</span></div>
 </footer>
-
-<script>
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 10), { passive: true });
-</script>
 </body>
 </html>

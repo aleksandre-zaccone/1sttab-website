@@ -2,168 +2,78 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Report a Bug — 1stTab</title>
-<meta name="description" content="Found a bug in 1stTab? Let us know so we can fix it.">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" href="assets/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Report a bug — 1stTab</title>
+<meta name="description" content="Help us understand what happened so we can improve the bookmark workspace.">
+<meta name="application-name" content="1stTab">
+<meta name="theme-color" content="#f7f8fa">
+<meta name="google-site-verification" content="NJ5g8DlZnORgyv9Ba-MatWQXtFF1xv9v6YgSDFc41xQ">
+<link rel="icon" href="assets/favicon.png">
+<link rel="canonical" href="https://1sttab-app.web.app/bugs">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Report a bug — 1stTab">
+<meta property="og:description" content="Help us understand what happened so we can improve the bookmark workspace.">
+<meta property="og:url" content="https://1sttab-app.web.app/bugs">
+<meta property="og:image" content="https://1sttab-app.web.app/assets/bookmark-v2-list.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/site-v2.css">
+<script src="assets/site-v2.js" defer></script>
 </head>
-<body>
-
+<body class=""><a class="skip-link" href="#main">Skip to content</a>
 <header class="nav" id="nav">
-  <div class="nav-inner">
-    <a class="nav-logo" href="index.html">
-      <img src="assets/icon48.png" alt="1stTab icon">
-      1stTab
-    </a>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="index.html#features">Features</a>
-      <a href="news.html">News</a>
-      <a href="request.html">Request</a>
-      <a href="bugs.html" class="active">Bugs</a>
-      <a href="terms.html">Terms</a>
-      <a href="privacy.html">Privacy</a>
-    </nav>
-    <div class="nav-cta">
-      <a href="https://chromewebstore.google.com/detail/1sttab/bigolehnkpljdbocpkljjmkkocefinbh?authuser=0&hl=en" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Add to Chrome</a>
-    </div>
-  </div>
+<div class="nav-inner"><a class="nav-logo" href="index.html" aria-label="1stTab home"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></span><span>1st<span class="logo-accent">Tab</span></span></a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+<nav class="nav-links" id="site-menu" aria-label="Main navigation"><a href="index.html#features">Features</a><a href="guide.html">How it works</a><a href="index.html#roadmap">Roadmap</a><a href="news.html">News</a></nav>
+<a class="launch-pill" href="news-bookmark-focus.html#launch"><span class="status-dot"></span>v2 · Coming soon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
 </header>
-
-<div class="page-wrap">
-  <div style="margin-bottom:32px">
-    <div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:#c5221f;background:#fce8e6;padding:4px 12px;border-radius:9999px;margin-bottom:16px">Bug Reports</div>
-    <h1 class="page-title">Report a Bug</h1>
-    <p style="font-size:16px;color:var(--text-2);margin-top:6px">Found something that isn't working right? Good bug reports help us fix issues faster. Please include as much detail as possible.</p>
-  </div>
-
-  <div class="page-card">
-    <div class="callout" style="border-left-color:#e37400;background:#fef3e2">
-      <strong>Before submitting:</strong> Try refreshing the page or restarting Chrome. If the issue persists, please fill out the form below.
-    </div>
-
-    <!--
-      FORMSPREE SETUP (5 minutes):
-      1. Go to https://formspree.io → New Form → give it a name (e.g. "1stTab Bug Reports")
-      2. Copy the endpoint URL (looks like https://formspree.io/f/xabcdefg)
-      3. Replace the action below with that URL
-      4. Connect Google Sheets: Formspree dashboard → Integrations → Google Sheets
-         Bug reports land in a Sheet automatically — easy to triage.
-    -->
-    <form class="form" id="bugForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <div class="form-row">
-        <div class="form-group">
-          <label class="form-label" for="bug-name">Your name</label>
-          <input class="form-input" type="text" id="bug-name" name="name" placeholder="Alex Johnson" autocomplete="name">
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="bug-email">Email address <strong style="color:var(--blue)">*</strong></label>
-          <div class="form-sublabel">So we can follow up with a fix or ask questions</div>
-          <input class="form-input" type="email" id="bug-email" name="email" placeholder="alex@example.com" required autocomplete="email">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="bug-area">Where does the bug occur? <strong style="color:var(--blue)">*</strong></label>
-        <select class="form-select" id="bug-area" name="area" required>
-          <option value="">Select…</option>
-          <option value="dashboard">Dashboard</option>
-          <option value="bookmarks">Bookmarks widget</option>
-          <option value="notes">Notes widget</option>
-          <option value="todo">To-Do widget</option>
-          <option value="clocks">World Clocks</option>
-          <option value="weather">Weather widget</option>
-          <option value="pomodoro">Pomodoro timer</option>
-          <option value="crypto">Crypto / FX / Stocks</option>
-          <option value="history">History widget</option>
-          <option value="panel">Side Panel</option>
-          <option value="ai">AI Assistant</option>
-          <option value="settings">Settings</option>
-          <option value="manager">Bookmarks Manager</option>
-          <option value="backup">Drive Backup / Plus</option>
-          <option value="other">Other / Not sure</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="bug-severity">Severity <strong style="color:var(--blue)">*</strong></label>
-        <select class="form-select" id="bug-severity" name="severity" required>
-          <option value="">Select…</option>
-          <option value="critical">Critical — extension is unusable / data lost</option>
-          <option value="major">Major — feature is broken or frequently crashing</option>
-          <option value="minor">Minor — visual issue or occasional glitch</option>
-          <option value="cosmetic">Cosmetic — something looks slightly off</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="bug-title">Bug summary <strong style="color:var(--blue)">*</strong></label>
-        <div class="form-sublabel">A short, clear description (e.g. "Crypto widget shows stale prices after 1 hour")</div>
-        <input class="form-input" type="text" id="bug-title" name="title" placeholder="Short description of the bug" required maxlength="150">
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="bug-steps">Steps to reproduce <strong style="color:var(--blue)">*</strong></label>
-        <div class="form-sublabel">List the exact steps that cause the bug. Start with step 1.</div>
-        <textarea class="form-textarea" id="bug-steps" name="steps" placeholder="1. Open a new tab&#10;2. Click on the Weather widget&#10;3. …" required style="min-height:120px"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="bug-expected">Expected behavior</label>
-        <input class="form-input" type="text" id="bug-expected" name="expected" placeholder="What should have happened?">
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="bug-actual">Actual behavior <strong style="color:var(--blue)">*</strong></label>
-        <input class="form-input" type="text" id="bug-actual" name="actual" placeholder="What actually happened?" required>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="bug-env">Chrome version &amp; OS</label>
-        <div class="form-sublabel">Find your Chrome version at chrome://settings/help</div>
-        <input class="form-input" type="text" id="bug-env" name="environment" placeholder="e.g. Chrome 124 on macOS 14.4">
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="bug-plus">Are you a Plus user?</label>
-        <select class="form-select" id="bug-plus" name="plus">
-          <option value="">Not sure / prefer not to say</option>
-          <option value="yes">Yes, I have 1stTab Plus</option>
-          <option value="no">No, I'm on the free plan</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="bug-extra">Additional notes</label>
-        <textarea class="form-textarea" id="bug-extra" name="extra" placeholder="Console errors, screenshots description, workaround you found, etc." style="min-height:80px"></textarea>
-      </div>
-
-      <div style="padding-top:8px;border-top:1px solid var(--border)">
-        <button type="submit" class="btn btn-primary form-submit">Send Bug Report</button>
-        <p style="font-size:13px;color:var(--text-3);margin-top:12px">Or email us directly at <a href="mailto:aablotia@ablotia.com">aablotia@ablotia.com</a>.</p>
-      </div>
-    </form>
-  </div>
+<main id="main">
+<section class="container page-hero">
+<p class="mini-label">BUG REPORTS</p>
+<h1>Something out of place?</h1>
+<p>Help us understand what happened so we can improve the bookmark workspace.</p>
+</section>
+<div class="container support-layout">
+<aside class="support-aside"><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16M8 3v6M16 9v6M10 15v6"/></svg></span>
+<h2>A good report starts a conversation.</h2>
+<p>We’re concentrating on saving, organizing, and finding bookmarks. Your experience helps shape that work.</p>
+<p>This form prepares an email draft for you to review and send. No information is submitted automatically.</p>
+<a href="mailto:aablotia@ablotia.com" class="text-link">Email us directly <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a><a href="guide.html" class="text-link">Check the guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></aside>
+<form class="feedback-form" data-feedback="bug">
+<div class="form-group"><label for="area">Feature area *</label><select id="area" name="area" required><option value="">Choose an area</option><option>Folders & collections</option><option>Search & filters</option><option>Tags, notes & favorites</option><option>Card / list view</option><option>Themes & accessibility</option><option>Side panel</option><option>Import, export & recovery</option><option>Google Drive sync (planned)</option><option>Between-account sync (planned)</option><option>Website</option><option>Other</option></select></div>
+<div class="form-group"><label for="title">Short summary *</label><input id="title" name="title" type="text" maxlength="180" placeholder="e.g. Folder name is clipped in the sidebar" required></div>
+<div class="form-group"><label for="steps">Steps to reproduce *</label><textarea id="steps" name="steps" rows="5" maxlength="5000" placeholder="1. Open a new tab
+2. Open a collection
+3. Describe what happens" required></textarea></div>
+<div class="form-group"><label for="expected">What did you expect?</label><input id="expected" name="expected" type="text" maxlength="180" placeholder=""></div>
+<div class="form-group"><label for="actual">What happened instead? *</label><textarea id="actual" name="actual" rows="5" maxlength="5000" placeholder="Describe the result you saw." required></textarea></div>
+<div class="form-group"><label for="environment">Extension version, Chrome version & operating system</label><input id="environment" name="environment" type="text" maxlength="180" placeholder="e.g. 1stTab 2.0.0 · Chrome version · Windows / macOS / Linux"></div>
+<p class="form-note">* Required. Please leave out passwords, API keys, and private bookmark exports.</p>
+<button type="submit" class="btn btn-primary" disabled>Prepare email draft <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+<div class="draft-result" hidden>
+<p class="draft-status" role="status" aria-live="polite"></p>
+<label for="draft-message">Your message</label><textarea id="draft-message" rows="10" readonly></textarea>
+<div class="draft-actions"><a class="btn btn-primary draft-email">Open email app <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a><button class="btn btn-outline copy-draft" type="button">Copy message</button></div>
+<p class="field-hint">Review the draft in your email app before sending. If no app opens, copy the message and email aablotia@ablotia.com.</p>
 </div>
-
+<noscript>
+<p>Email your report directly to <a href="mailto:aablotia@ablotia.com">aablotia@ablotia.com</a>.</p>
+</noscript></form>
+</div>
+</main>
 <footer class="footer">
-  <div class="footer-bottom" style="max-width:var(--max-w);margin:0 auto;padding:24px 24px 0">
-    <span>© 2026 1stTab. All rights reserved.</span>
-    <div class="footer-bottom-links">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-      <a href="index.html">Home</a>
-    </div>
-  </div>
+<div class="container footer-grid">
+<div class="footer-intro"><a class="nav-logo" href="index.html" aria-label="1stTab home"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></span><span>1st<span class="logo-accent">Tab</span></span></a>
+<p>A thoughtful home for<br>the links worth keeping.</p>
+<span class="footer-release">Version 2.0 · Chrome extension · Coming soon</span></div>
+<div>
+<h2>Explore</h2>
+<a href="index.html#features">Features</a><a href="guide.html">How it works</a><a href="index.html#roadmap">Roadmap</a><a href="news.html">News</a></div>
+<div>
+<h2>Let’s make it better</h2>
+<a href="request.html">Suggest a feature</a><a href="bugs.html">Report a bug</a><a href="mailto:aablotia@ablotia.com">Get in touch</a><a href="https://github.com/aleksandre-zaccone/1stTab" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a></div>
+<div>
+<h2>The details</h2>
+<a href="privacy.html">Privacy</a><a href="terms.html">Terms & conditions</a><a href="LICENSE.txt">MIT license</a></div>
+</div>
+<div class="container footer-bottom"><span>© 2026 1stTab</span><span>Save something good.</span></div>
 </footer>
-
-<script>
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 10), { passive: true });
-</script>
 </body>
 </html>
