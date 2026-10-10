@@ -6,7 +6,7 @@ import {resolve, dirname, extname, relative, isAbsolute} from 'node:path';
 import {fileURLToPath} from 'node:url';
 const {chromium} = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const pages = ['index.html', 'news.html', 'news-bookmark-focus.html', 'guide.html', 'privacy.html', 'terms.html', 'request.html', 'bugs.html'];
+const pages = ['index.html', 'news.html', 'news-bookmark-focus.html', 'news-v2-chrome-web-store.html', 'guide.html', 'privacy.html', 'terms.html', 'request.html', 'bugs.html'];
 const mime = {'.html':'text/html', '.css':'text/css', '.js':'text/javascript', '.png':'image/png', '.svg':'image/svg+xml', '.txt':'text/plain'};
 const server = createServer(async (req, res) => {
   try {
