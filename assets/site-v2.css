@@ -200,6 +200,7 @@ summary{cursor:pointer}
 .page-hero>p:last-child{max-width:650px;margin-top:21px;font-size:16px;line-height:1.8}
 .news-section{padding-bottom:90px}
 .news-feature{display:grid;grid-template-columns:1fr 1.06fr;border:1px solid var(--line);border-radius:24px;background:white;overflow:hidden}
+.news-feature+.news-feature{margin-top:27px}
 .news-art{min-height:350px;position:relative;background:#e5edfd;overflow:hidden;padding:40px;color:var(--blue);display:flex;flex-direction:column;justify-content:space-between}
 .news-version{font-size:115px;font-weight:750;letter-spacing:-9px;line-height:1}
 .news-art-icon{position:absolute;right:24px;top:52px;transform:rotate(13deg);color:#fff;background:var(--blue);width:136px;height:168px;border-radius:26px;display:grid;place-items:center;box-shadow:0 23px 40px #274e9e1a}
@@ -229,6 +230,27 @@ summary{cursor:pointer}
 .article-body p a,.docs-content a{color:var(--blue);text-decoration:underline;text-underline-offset:4px}
 .article-body strong{color:#394e6c;font-weight:600}
 .article-end{margin-top:40px;border-top:1px solid var(--line);padding-top:28px;display:flex;align-items:center;gap:25px}
+.article-cta{display:flex;align-items:center;flex-wrap:wrap;gap:12px 22px;margin:28px 0 10px}
+.article-cta small{font-size:12px;color:#8290a4}
+.article-figure{margin:32px 0 36px;border:1px solid #d2dce9;border-radius:16px;overflow:hidden;background:white;box-shadow:0 14px 40px #1737630a}
+.article-figure img{width:100%;height:auto}
+.article-figure figcaption{padding:11px 18px;font-size:11px;color:#7c899e;border-top:1px solid var(--line)}
+.article-body h3{font-size:19px;letter-spacing:-.3px;margin:32px 0 10px}
+.gallery figcaption{display:flex;justify-content:space-between;gap:12px}
+.gallery-stack img+img{border-top:1px solid var(--line)}
+.gallery-controls{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 16px;padding:14px 18px;border-top:1px solid var(--line);background:#fbfcfe}
+html:not(.js) .gallery-controls,html:not(.js) .gallery-hint{display:none}
+.gallery .preview-switch{flex-wrap:wrap}
+.theme-picker{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;width:100%}
+.theme-picker button{display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-width:0;padding:6px 6px 8px;border:1px solid var(--line);border-radius:10px;background:white;color:var(--ink);font-size:12px;font-weight:600;line-height:1.3;text-align:left}
+.theme-picker button:hover{border-color:#bbcbe2}
+.theme-picker button[aria-pressed=true]{border-color:var(--blue);box-shadow:0 0 0 2px #285de52e}
+.theme-picker small{max-width:100%;overflow:hidden;font-size:10px;font-weight:450;color:#7c899e;white-space:nowrap;text-overflow:ellipsis}
+.gallery-range{display:flex;align-items:center;gap:12px;flex:1 1 260px;font-size:12px;font-weight:600;color:var(--ink);white-space:nowrap}
+.gallery-range input{flex:1;min-width:0;accent-color:var(--blue)}
+.gallery-range output{min-width:40px;font-size:12px;font-weight:550;color:#4f607b;text-align:right;font-variant-numeric:tabular-nums}
+.gallery-option{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;color:var(--ink)}
+.theme-thumb{display:block;width:100%;aspect-ratio:16/10;margin-bottom:5px;border:1px solid #e4eaf3;border-radius:6px;background:center/cover no-repeat}
 .docs-hero{border-bottom:1px solid var(--line);padding-bottom:38px}
 .docs-layout{display:grid;grid-template-columns:225px minmax(0,1fr);gap:64px;padding:42px 0 90px}
 .docs-layout aside{position:sticky;top:122px;align-self:start}
@@ -468,6 +490,15 @@ summary{cursor:pointer}
 .article-body>p{font-size:14px;line-height:1.9}
 .article-body h2{font-size:25px}
 .article-end{flex-wrap:wrap;gap:20px}
+.article-figure{margin:24px 0 28px;border-radius:12px}
+.article-figure figcaption{padding:9px 14px;font-size:10px}
+.gallery figcaption{flex-direction:column;gap:2px}
+.gallery-controls{padding:12px 14px}
+.theme-picker{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.theme-picker small{display:none}
+.gallery-range{flex-basis:100%}
+.gallery-option{width:100%;justify-content:space-between}
+.article-body h3{font-size:18px}
 .docs-hero{padding-bottom:29px}
 .docs-layout{display:block;padding:26px 0 65px}
 .docs-layout aside{position:static;margin-bottom:28px}
