@@ -538,3 +538,7 @@ html:not(.js) .gallery-controls,html:not(.js) .gallery-hint{display:none}
 *,*::before,*::after{animation:none!important;transition:none!important}
 .btn:hover{transform:none}
 }
+
+/* Patch versions fit beside the bookmark illustration on news cards. */
+.news-version--patch{font-size:64px;letter-spacing:-4px}
+@media(max-width:600px){.news-version--patch{font-size:56px;letter-spacing:-3px}}
