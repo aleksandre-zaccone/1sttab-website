@@ -15,14 +15,14 @@
 <meta property="og:url" content="https://1sttab-app.web.app/guide">
 <meta property="og:image" content="https://1sttab-app.web.app/assets/bookmark-v2-list.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="assets/site-v2.css">
-<script src="assets/site-v2.js" defer></script>
+<link rel="stylesheet" href="assets/site-v2.css?v=20261013">
+<script src="assets/site-v2.js?v=20261010" defer></script>
 </head>
 <body class=""><a class="skip-link" href="#main">Skip to content</a>
 <header class="nav" id="nav">
 <div class="nav-inner"><a class="nav-logo" href="index.html" aria-label="1stTab home"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></span><span>1st<span class="logo-accent">Tab</span></span></a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
 <nav class="nav-links" id="site-menu" aria-label="Main navigation"><a href="index.html#features">Features</a><a href="guide.html" aria-current="page">How it works</a><a href="index.html#roadmap">Roadmap</a><a href="news.html">News</a></nav>
-<a class="launch-pill" href="news-bookmark-focus.html#launch"><span class="status-dot"></span>v2 · Coming soon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+<a class="launch-pill" href="news-v2-1-1-ui-polish.html"><span class="status-dot"></span>v2.1.1 · UI polish<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
 </header>
 <main id="main">
 <section class="container page-hero docs-hero">
@@ -32,22 +32,22 @@
 </section>
 <div class="container docs-layout">
 <aside>
-<nav aria-label="On this page"><a href="#release">About this guide</a><a href="#start">Your library, one tab away</a><a href="#folders">Folders & drag and drop</a><a href="#find">Search & filters</a><a href="#appearance">Make it yours</a><a href="#tools">Export, import & cleanup</a><a href="#recovery">Undo & recovery</a><a href="#shortcuts">Keyboard & side panel</a><a href="#sync">Data & upcoming sync</a></nav>
+<nav aria-label="On this page"><a href="#release">About this guide</a><a href="#start">Your library, one tab away</a><a href="#folders">Folders & drag and drop</a><a href="#find">Search & filters</a><a href="#appearance">Make it yours</a><a href="#tools">Export, import & cleanup</a><a href="#recovery">Backup & restore</a><a href="#shortcuts">Keyboard & side panel</a><a href="#sync">Data & upcoming sync</a></nav>
 </aside>
 <div class="docs-content">
 <section id="release">
 <h2>About this guide</h2>
-<p>This guide describes the implemented v2.0 workspace. The public Chrome Web Store release is coming soon; the store link will appear on this website when it is available.</p>
+<p>This guide describes the implemented v2.0 workspace. Version 2.0 is available on the <a href="https://chromewebstore.google.com/detail/1sttab-%E2%80%94-bookmark-manager/bigolehnkpljdbocpkljjmkkocefinbh" target="_blank" rel="noopener noreferrer">Chrome Web Store</a>.</p>
 </section>
 <section id="start">
 <h2>Your library, one tab away</h2>
-<p>Open a new Chrome tab to see your bookmarks. Chrome may ask you to confirm the new-tab change after installing or reloading 1stTab. Your library uses Chrome’s native bookmarks, so changes also appear in Chrome’s bookmark manager.</p>
+<p>Open a new Chrome tab to see Favorites in grid view. The number of bookmarks per row adapts to the available width. Chrome may ask you to confirm the new-tab change after installing or reloading 1stTab. Your library uses Chrome’s native bookmarks, so changes also appear in Chrome’s bookmark manager.</p>
 <ol>
 <li><strong>Save a page.</strong> Click the extension’s toolbar icon on a normal website, or choose <strong>Add bookmark</strong> in your library.</li>
-<li><strong>Give it context.</strong> Pick a folder, add comma-separated tags, and write an optional note.</li>
+<li><strong>Give it context.</strong> Pick a folder from the hierarchical dropdown, add comma-separated tags, and write an optional note.</li>
 <li><strong>Find it again.</strong> Search its title, URL, tags, or note. Click the bookmark title to open the website.</li>
 </ol>
-<div class="doc-callout">The design previews contain sample bookmarks. Installing the extension does not add those samples to your real library.</div>
+<div class="doc-callout">The design previews contain sample bookmarks. Those preview samples are separate from the 12 starter bookmarks added as Favorites on first install. Existing bookmarks are preserved, duplicate URLs are skipped, and updates do not add the starter list again.</div>
 </section>
 <section id="folders">
 <h2>Folders & drag and drop</h2>
@@ -60,7 +60,7 @@
 <h2>Search & filters</h2>
 <p>Search stays at the top while you scroll. Press <kbd>Ctrl</kbd> / <kbd>⌘</kbd> + <kbd>K</kbd> to focus it.</p>
 <p><strong>Show filters</strong> reveals collection, tag, domain, and favorites filters in both card and list views. Hiding the filters keeps them applied; a badge shows the active count. Use <strong>Reset filters</strong> to clear them and search. Clicking a tag filters by that tag.</p>
-<p>Use the star on a bookmark to add it to Favorites. Select Favorites in the sidebar or the top navigation to see your saved favorites.</p>
+<p>Bookmarks show the website’s icon. Most starter sites use bundled high-resolution icons; other sites use Chrome’s saved favicon or request the site’s favicon when needed. If neither is available, the first letter of the name is shown. Use the star on a bookmark to add it to Favorites. Select Favorites in the sidebar to see your saved favorites. On smaller screens, open Collections to access the sidebar.</p>
 </section>
 <section id="appearance">
 <h2>Make it yours</h2>
@@ -69,7 +69,7 @@
 <li><strong>Appearance:</strong> choose Prism, Atelier, Studio, Pop, or Enterprise, with Light, Dark, or Follow system mode.</li>
 <li><strong>Text & icons:</strong> increase text up to 140% and icons up to 150% independently.</li>
 <li><strong>Workspace:</strong> choose cards or a compact list, display sort, spacing, note visibility, and reduced motion.</li>
-<li><strong>Card shapes:</strong> Rectangle, Square, Rounded, Circle, or Sphere. Use Preview in card view to try the shape. List view stays compact.</li>
+<li><strong>Card shapes:</strong> Rectangle, Square, Rounded, Circle, or Sphere. Circle and Sphere show a large bookmark icon first, the name beneath it, and the favorite star below. Use Preview in card view to try the shape. List view stays compact.</li>
 </ul>
 <p><strong>Reset appearance</strong> restores the default theme, sizes, card shape, sidebar width, spacing, notes, and motion preferences. It keeps your bookmarks, selected view, sort order, and expanded folders.</p>
 </section>
@@ -78,14 +78,13 @@
 <p>Open <strong>Settings → Library tools</strong>.</p>
 <ul>
 <li><strong>Export library</strong> downloads a JSON backup of bookmarks, tags, and notes. It does not include API keys.</li>
-<li><strong>Import export</strong> validates a 1stTab JSON file, shows counts, and asks you to choose a destination. Confirming adds a separate Imported folder without overwriting existing bookmarks.</li>
-<li><strong>Review cleanup</strong> lists exact-URL duplicates and empty folders. Choose items, review the deletion, then confirm. Nothing is deleted automatically.</li>
+<li><strong>Import</strong> validates a 1stTab JSON file, shows counts, and asks you to choose a destination. Confirming adds folders and bookmarks directly to your chosen destination without overwriting existing bookmarks.</li>
+<li><strong>Clean duplicates</strong> lists exact-URL duplicates and empty folders. Choose items, review the deletion, then confirm. Nothing is deleted automatically.</li>
 </ul>
 </section>
 <section id="recovery">
-<h2>Undo & recovery</h2>
-<p><strong>Undo last edit</strong> reverses the latest supported change, including bookmark metadata or deleted folder contents. It refuses to overwrite conflicting edits made afterward in another surface.</p>
-<p><strong>Restore snapshot</strong> previews and imports the saved pre-edit library snapshot additively, so it may create duplicates. A recovery snapshot is not a permanent backup archive: export a copy before extensive changes.</p>
+<h2>Backup & restore</h2>
+<p>Use <strong>Export library</strong> before extensive changes. To restore an exported JSON file, choose <strong>Import</strong>, review the preview, and select a destination. Imports add data without overwriting existing bookmarks and may create duplicates. Restore from Google Drive is planned for a later release.</p>
 </section>
 <section id="shortcuts">
 <h2>Keyboard & side panel</h2>
@@ -129,10 +128,10 @@
 <div class="container footer-grid">
 <div class="footer-intro"><a class="nav-logo" href="index.html" aria-label="1stTab home"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></span><span>1st<span class="logo-accent">Tab</span></span></a>
 <p>A thoughtful home for<br>the links worth keeping.</p>
-<span class="footer-release">Version 2.0 · Chrome extension · Coming soon</span></div>
+<span class="footer-release">Version 2.1.1 · Chrome extension</span></div>
 <div>
 <h2>Explore</h2>
-<a href="index.html#features">Features</a><a href="guide.html">How it works</a><a href="index.html#roadmap">Roadmap</a><a href="news.html">News</a></div>
+<a href="index.html#features">Features</a><a href="guide.html">How it works</a><a href="index.html#roadmap">Roadmap</a><a href="news.html">News</a><a href="https://chromewebstore.google.com/detail/1sttab-%E2%80%94-bookmark-manager/bigolehnkpljdbocpkljjmkkocefinbh" target="_blank" rel="noopener noreferrer">Chrome Web Store ↗</a></div>
 <div>
 <h2>Let’s make it better</h2>
 <a href="request.html">Suggest a feature</a><a href="bugs.html">Report a bug</a><a href="mailto:aablotia@ablotia.com">Get in touch</a><a href="https://github.com/aleksandre-zaccone/1stTab" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a></div>

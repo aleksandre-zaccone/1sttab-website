@@ -55,6 +55,70 @@ for (const button of previewButtons) {
   });
 }
 
+// Article galleries build the image path from one choice per group,
+// e.g. data-pattern="themes/{theme}-{mode}.png". A group is either a set of
+// pressed buttons or a range input whose steps map to data-values.
+for (const gallery of document.querySelectorAll('[data-gallery]')) {
+  // Each image may override the gallery's pattern and alt text, so one set of
+  // controls can drive several related screenshots.
+  const images = gallery.querySelectorAll('[data-gallery-image]');
+  const label = gallery.querySelector('[data-gallery-caption]');
+  const controls = gallery.querySelectorAll('[data-group]');
+  const selected = {};
+  label?.setAttribute('aria-live', 'polite');
+
+  function rangeChoice(range) {
+    const value = range.dataset.values.split(',')[range.value];
+    const text = range.dataset.label.replace('{value}', value);
+    range.setAttribute('aria-valuetext', text);
+    const output = range.parentElement.querySelector('output');
+    if (output) output.value = `${value}%`;
+    return {option: value, label: text};
+  }
+
+  for (const control of controls) {
+    const group = control.dataset.group;
+    if (control.type === 'range') selected[group] = rangeChoice(control);
+    else if (control.getAttribute('aria-pressed') === 'true') selected[group] = {option: control.dataset.option, label: control.dataset.label, button: control};
+  }
+
+  function showSelection() {
+    const labels = Object.values(selected).map(choice => choice.label);
+    if (label) label.textContent = labels.join(' · ');
+    for (const image of images) {
+      const pattern = image.dataset.pattern || gallery.dataset.pattern;
+      const src = pattern.replace(/\{(\w+)\}/g, (_, group) => selected[group]?.option || '');
+      const next = new Image();
+      // Swap only once the new screenshot is ready, so the figure never flashes empty.
+      next.onload = () => {
+        if (image.dataset.pending !== src) return;
+        image.src = src;
+        image.alt = (image.dataset.alt || gallery.dataset.alt).replace('{label}', labels.join(', '));
+      };
+      image.dataset.pending = src;
+      next.src = src;
+    }
+  }
+
+  for (const control of controls) {
+    const group = control.dataset.group;
+    if (control.type === 'range') {
+      control.addEventListener('input', () => {
+        selected[group] = rangeChoice(control);
+        showSelection();
+      });
+      continue;
+    }
+    control.addEventListener('click', () => {
+      if (selected[group]?.button === control) return;
+      selected[group]?.button.setAttribute('aria-pressed', 'false');
+      control.setAttribute('aria-pressed', 'true');
+      selected[group] = {option: control.dataset.option, label: control.dataset.label, button: control};
+      showSelection();
+    });
+  }
+}
+
 for (const form of document.querySelectorAll('[data-feedback]')) {
   const result = form.querySelector('.draft-result');
   const output = form.querySelector('#draft-message');
