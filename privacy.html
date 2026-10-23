@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>Your data, explained. — 1stTab</title>
-<meta name="description" content="Privacy for the local v2 library and the 1stTab website. Last updated October 6, 2026.">
+<meta name="description" content="Privacy policy for 1stTab 2.2.1, including local bookmark handling and optional, user-started Google Drive backup and restore.">
 <meta name="application-name" content="1stTab">
 <meta name="theme-color" content="#f7f8fa">
 <meta name="google-site-verification" content="NJ5g8DlZnORgyv9Ba-MatWQXtFF1xv9v6YgSDFc41xQ">
@@ -11,38 +11,38 @@
 <link rel="canonical" href="https://1sttab-app.web.app/privacy">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Your data, explained. — 1stTab">
-<meta property="og:description" content="Privacy for the local v2 library and the 1stTab website. Last updated October 6, 2026.">
+<meta property="og:description" content="Privacy policy for 1stTab 2.2.1, including local bookmark handling and optional, user-started Google Drive backup and restore.">
 <meta property="og:url" content="https://1sttab-app.web.app/privacy">
 <meta property="og:image" content="https://1sttab-app.web.app/assets/bookmark-v2-list.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="assets/site-v2.css?v=20261013">
+<link rel="stylesheet" href="assets/site-v2.css?v=20261022">
 <script src="assets/site-v2.js?v=20261010" defer></script>
 </head>
 <body class=""><a class="skip-link" href="#main">Skip to content</a>
 <header class="nav" id="nav">
 <div class="nav-inner"><a class="nav-logo" href="index.html" aria-label="1stTab home"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></span><span>1st<span class="logo-accent">Tab</span></span></a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
 <nav class="nav-links" id="site-menu" aria-label="Main navigation"><a href="index.html#features">Features</a><a href="guide.html">How it works</a><a href="index.html#roadmap">Roadmap</a><a href="news.html">News</a></nav>
-<a class="launch-pill" href="news-v2-1-1-ui-polish.html"><span class="status-dot"></span>v2.1.1 · UI polish<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+<a class="launch-pill" href="news-v2-2-1.html"><span class="status-dot"></span>v2.2.1 · Available now<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
 </header>
 <main id="main">
 <section class="container page-hero docs-hero">
 <p class="mini-label">PRIVACY</p>
 <h1>Your data, explained.</h1>
-<p>Privacy for the local v2 library and the 1stTab website. Last updated October 6, 2026.</p>
+<p>Updated for 1stTab version 2.2.1, including its optional Google Drive backup and restore features.</p>
 </section>
 <div class="container docs-layout">
 <aside>
-<nav aria-label="On this page"><a href="#scope">What this page covers</a><a href="#extension">Your bookmark library</a><a href="#chrome">Chrome sync & external links</a><a href="#controls">Your controls</a><a href="#permissions">Extension permissions</a><a href="#website">This website & feedback</a><a href="#future">Upcoming sync & optional integrations</a><a href="#contact">Questions about your data</a></nav>
+<nav aria-label="On this page"><a href="#scope">What this page covers</a><a href="#extension">Your bookmark library</a><a href="#chrome">Chrome sync & external links</a><a href="#controls">Your controls</a><a href="#permissions">Extension permissions</a><a href="#drive">Optional Google Drive backup</a><a href="#website">This website & feedback</a><a href="#contact">Questions about your data</a></nav>
 </aside>
 <div class="docs-content">
 <section id="scope">
 <h2>What this page covers</h2>
-<p>This policy describes the local 1stTab v2 bookmark manager and this product website. Version 2.0 is being prepared for public release. Planned sync features are described separately below.</p>
+<p>This policy describes the 1stTab bookmark manager, including the optional Google Drive backup and restore in version 2.2.1, and this product website. The website and extension are separate: this website cannot read or change your Chrome bookmarks.</p>
 </section>
 <section id="extension">
 <h2>Your bookmark library</h2>
 <p>1stTab reads and edits your native Chrome bookmarks when you use its library. It reads the current page title and URL following your action on the extension’s toolbar icon.</p>
-<p>Bookmark notes, tags, favorites, preferences, migration snapshots, and recovery backups are stored in the extension’s local storage on your device. The local release does not upload your library, collect analytics, or send bookmarks to AI or cloud providers.</p>
+<p>Bookmark notes, tags, favorites, preferences, migration snapshots, and recovery backups are stored in the extension’s local storage on your device. Ordinary local use does not upload your library or collect analytics. Google receives bookmark data only if you explicitly connect Drive and start a backup, as described below. 1stTab does not send bookmark data to AI providers.</p>
 </section>
 <section id="chrome">
 <h2>Chrome sync & external links</h2>
@@ -63,7 +63,13 @@
 <li><strong>activeTab:</strong> read the current page after your toolbar click.</li>
 <li><strong>favicon:</strong> display Chrome’s saved website icons for bookmarks, with a first-letter fallback.</li>
 </ul>
-<p>The local package has no required external host access, browsing-history permission, or hardware-monitoring permission.</p>
+<p>Google identity and <code>https://www.googleapis.com/*</code> access are optional. They are requested only if you choose to connect Google Drive; Drive backup uses only the <code>drive.appdata</code> scope. The extension does not request Gmail, Calendar, general Drive-file access, browsing-history permission, or hardware-monitoring permission.</p>
+</section>
+<section id="drive">
+<h2>Optional Google Drive backup</h2>
+<p>Connecting Drive and starting a backup sends Google a versioned export containing bookmarks, folders, notes, tags, favorites, and supported appearance/view preferences. The export is stored in Drive’s app-private <code>appDataFolder</code>, which is hidden from the normal Drive file list and accessible to this app. Uploads are user-started. Restore is additive, shows a preview, and may create duplicate bookmarks; it does not overwrite existing bookmarks.</p>
+<p>The Drive account identifier and display name/email are used to verify the connected account and are stored locally with operation status and timestamps. These account details are excluded from exports. Chrome’s identity API handles access tokens; 1stTab does not log or export tokens. Disconnecting clears local connection details and Chrome’s cached tokens but does not delete backups already in Drive. You can delete backups in 1stTab or revoke the grant through Google account settings. Google deletes the app-private data folder if you uninstall the app from Drive. See <a href="https://policies.google.com/privacy">Google’s privacy policy</a>.</p>
+<p>The use of information received from Google APIs will adhere to the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
 </section>
 <section id="website">
 <h2>This website & feedback</h2>
@@ -71,9 +77,8 @@
 <p>The feedback forms prepare an email draft in your browser. They do not submit information to a form service. Text is sent only if you choose to send it using your email provider. The site does not store drafts in local storage or send them to a server. Messages you send to support are used to respond to your request. Public GitHub issues are visible to others; avoid including private bookmark data or credentials.</p>
 </section>
 <section id="future">
-<h2>Upcoming sync & optional integrations</h2>
-<p>Google Drive sync and sync between Google accounts are planned and are not active in the local v2 release. Before enabling new data transfers, the relevant permissions, recipients, data, and disconnect controls will need to be disclosed.</p>
-<p>A separate optional integration candidate contains user-initiated OpenAI tools and Google Drive backup/restore. It requires additional permission and recipient disclosures before use. That candidate is separate from the local release; backup/restore does not provide ongoing synchronization between accounts.</p>
+<h2>What is not included</h2>
+<p>Version 2.2.1 provides manual backup and restore, not scheduled uploads or continuous sync across devices or Google accounts. Those features are not active. Native Chrome bookmarks may sync according to your own Chrome settings; 1stTab notes, tags, favorites, and preferences do not automatically follow that sync.</p>
 </section>
 <section id="contact">
 <h2>Questions about your data</h2>
@@ -86,7 +91,7 @@
 <div class="container footer-grid">
 <div class="footer-intro"><a class="nav-logo" href="index.html" aria-label="1stTab home"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></span><span>1st<span class="logo-accent">Tab</span></span></a>
 <p>A thoughtful home for<br>the links worth keeping.</p>
-<span class="footer-release">Version 2.1.1 · Chrome extension</span></div>
+<span class="footer-release">Version 2.2.1 · Chrome extension</span></div>
 <div>
 <h2>Explore</h2>
 <a href="index.html#features">Features</a><a href="guide.html">How it works</a><a href="index.html#roadmap">Roadmap</a><a href="news.html">News</a><a href="https://chromewebstore.google.com/detail/1sttab-%E2%80%94-bookmark-manager/bigolehnkpljdbocpkljjmkkocefinbh" target="_blank" rel="noopener noreferrer">Chrome Web Store ↗</a></div>

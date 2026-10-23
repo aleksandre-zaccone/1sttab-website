@@ -15,14 +15,14 @@
 <meta property="og:url" content="https://1sttab-app.web.app/guide">
 <meta property="og:image" content="https://1sttab-app.web.app/assets/bookmark-v2-list.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="assets/site-v2.css?v=20261013">
+<link rel="stylesheet" href="assets/site-v2.css?v=20261022">
 <script src="assets/site-v2.js?v=20261010" defer></script>
 </head>
 <body class=""><a class="skip-link" href="#main">Skip to content</a>
 <header class="nav" id="nav">
 <div class="nav-inner"><a class="nav-logo" href="index.html" aria-label="1stTab home"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></span><span>1st<span class="logo-accent">Tab</span></span></a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
 <nav class="nav-links" id="site-menu" aria-label="Main navigation"><a href="index.html#features">Features</a><a href="guide.html" aria-current="page">How it works</a><a href="index.html#roadmap">Roadmap</a><a href="news.html">News</a></nav>
-<a class="launch-pill" href="news-v2-1-1-ui-polish.html"><span class="status-dot"></span>v2.1.1 · UI polish<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+<a class="launch-pill" href="news-v2-2-1.html"><span class="status-dot"></span>v2.2.1 · Available now<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
 </header>
 <main id="main">
 <section class="container page-hero docs-hero">
@@ -32,12 +32,12 @@
 </section>
 <div class="container docs-layout">
 <aside>
-<nav aria-label="On this page"><a href="#release">About this guide</a><a href="#start">Your library, one tab away</a><a href="#folders">Folders & drag and drop</a><a href="#find">Search & filters</a><a href="#appearance">Make it yours</a><a href="#tools">Export, import & cleanup</a><a href="#recovery">Backup & restore</a><a href="#shortcuts">Keyboard & side panel</a><a href="#sync">Data & upcoming sync</a></nav>
+<nav aria-label="On this page"><a href="#release">About this guide</a><a href="#start">Your library, one tab away</a><a href="#folders">Folders & drag and drop</a><a href="#find">Search & filters</a><a href="#appearance">Make it yours</a><a href="#language">Interface language</a><a href="#tools">Export, import & cleanup</a><a href="#recovery">Backup & restore</a><a href="#shortcuts">Keyboard & side panel</a><a href="#sync">Data & future sync</a></nav>
 </aside>
 <div class="docs-content">
 <section id="release">
 <h2>About this guide</h2>
-<p>This guide describes the implemented v2.0 workspace. Version 2.0 is available on the <a href="https://chromewebstore.google.com/detail/1sttab-%E2%80%94-bookmark-manager/bigolehnkpljdbocpkljjmkkocefinbh" target="_blank" rel="noopener noreferrer">Chrome Web Store</a>.</p>
+<p>This guide covers the current 1stTab bookmark workspace, including the multilingual interface and optional Google Drive backup available in version 2.2.1. <a href="https://chromewebstore.google.com/detail/1sttab-%E2%80%94-bookmark-manager/bigolehnkpljdbocpkljjmkkocefinbh" target="_blank" rel="noopener noreferrer">Get the latest version from the Chrome Web Store</a>.</p>
 </section>
 <section id="start">
 <h2>Your library, one tab away</h2>
@@ -73,6 +73,10 @@
 </ul>
 <p><strong>Reset appearance</strong> restores the default theme, sizes, card shape, sidebar width, spacing, notes, and motion preferences. It keeps your bookmarks, selected view, sort order, and expanded folders.</p>
 </section>
+<section id="language">
+<h2>Interface language</h2>
+<p>In Settings → Language, choose a language or leave it on <strong>Automatic</strong> to follow your browser language. The interface supports English, Russian, Georgian, German, and Japanese. Your language choice is stored on this device and does not translate bookmark titles, folders, notes, tags, or URLs.</p>
+</section>
 <section id="tools">
 <h2>Export, import & cleanup</h2>
 <p>Open <strong>Settings → Library tools</strong>.</p>
@@ -84,7 +88,7 @@
 </section>
 <section id="recovery">
 <h2>Backup & restore</h2>
-<p>Use <strong>Export library</strong> before extensive changes. To restore an exported JSON file, choose <strong>Import</strong>, review the preview, and select a destination. Imports add data without overwriting existing bookmarks and may create duplicates. Restore from Google Drive is planned for a later release.</p>
+<p>Use <strong>Export library</strong> before extensive changes. To restore an exported JSON file, choose <strong>Import</strong>, review the preview, and select a destination. In version 2.2.1, you can also connect Google Drive and start a manual backup. Review a Drive snapshot and its additive restore preview before confirming; restore can create duplicates and does not overwrite existing bookmarks.</p>
 </section>
 <section id="shortcuts">
 <h2>Keyboard & side panel</h2>
@@ -117,9 +121,9 @@
 <p>The side panel, new-tab manager, and Settings share bookmarks and local preferences. Settings is a page; it is not dismissed with Escape.</p>
 </section>
 <section id="sync">
-<h2>Data & upcoming sync</h2>
-<p>The local library requires no account and does not upload your bookmarks. Native bookmarks follow Chrome’s own sync settings. Tags, notes, favorites, settings, and recovery snapshots stay on your device.</p>
-<p><strong>Google Drive sync</strong> and <strong>sync between Google accounts</strong> are planned follow-ups. Neither is included in the local v2 release. Read the <a href="index.html#roadmap">roadmap</a> and <a href="privacy.html">Privacy page</a> for the distinction between current local behavior and future features.</p>
+<h2>Data & future sync</h2>
+<p>The local library requires no account. Native bookmarks follow Chrome’s own sync settings. Tags, notes, favorites, settings, and recovery snapshots stay on this device unless you explicitly include them in a manual Drive backup.</p>
+<p>Version 2.2.1 offers user-started Google Drive backup and additive restore, not automatic or continuous sync. Scheduled backups and cross-account sync remain future proposals. See the <a href="index.html#roadmap">roadmap</a> and <a href="privacy.html">Privacy page</a> for details about data handling.</p>
 </section>
 </div>
 </div>
@@ -128,7 +132,7 @@
 <div class="container footer-grid">
 <div class="footer-intro"><a class="nav-logo" href="index.html" aria-label="1stTab home"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg></span><span>1st<span class="logo-accent">Tab</span></span></a>
 <p>A thoughtful home for<br>the links worth keeping.</p>
-<span class="footer-release">Version 2.1.1 · Chrome extension</span></div>
+<span class="footer-release">Version 2.2.1 · Chrome extension</span></div>
 <div>
 <h2>Explore</h2>
 <a href="index.html#features">Features</a><a href="guide.html">How it works</a><a href="index.html#roadmap">Roadmap</a><a href="news.html">News</a><a href="https://chromewebstore.google.com/detail/1sttab-%E2%80%94-bookmark-manager/bigolehnkpljdbocpkljjmkkocefinbh" target="_blank" rel="noopener noreferrer">Chrome Web Store ↗</a></div>
