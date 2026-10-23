@@ -6,7 +6,7 @@ import {resolve, dirname, extname, relative, isAbsolute} from 'node:path';
 import {fileURLToPath} from 'node:url';
 const {chromium} = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const pages = ['index.html', 'news.html', 'news-bookmark-focus.html', 'news-v2-chrome-web-store.html', 'guide.html', 'privacy.html', 'terms.html', 'request.html', 'bugs.html'];
+const pages = ['index.html', 'news.html', 'news-bookmark-focus.html', 'news-v2-chrome-web-store.html', 'news-v2-1-1-ui-polish.html', 'news-v2-2-1.html', 'guide.html', 'privacy.html', 'terms.html', 'request.html', 'bugs.html'];
 const mime = {'.html':'text/html', '.css':'text/css', '.js':'text/javascript', '.png':'image/png', '.svg':'image/svg+xml', '.txt':'text/plain'};
 const server = createServer(async (req, res) => {
   try {
@@ -72,6 +72,8 @@ try {
     if (url.hash) assert.ok(documents.get(path)?.has(decodeURIComponent(url.hash.slice(1))), `${name}: missing anchor ${href}`);
   }
   await page.goto(`${origin}/index.html`);
+  assert.match(await page.locator('.feature-drive').innerText(), /Google Drive backup/);
+  assert.match(await page.locator('.feature-languages').innerText(), /English, Russian, Georgian, German, or Japanese/);
   await page.locator('[data-preview=cards]').click();
   assert.equal(await page.locator('[data-preview=cards]').getAttribute('aria-pressed'), 'true');
   assert.match(await page.locator('#workspace-image').getAttribute('src'), /cards/);
